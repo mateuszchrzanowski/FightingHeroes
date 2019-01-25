@@ -9,7 +9,7 @@ namespace FightingHeroes
     class Program
     {
         //TODO:
-        /* 
+        /* Commit
          * 
          * 
          * Zrobić klasę Opponent - będzie więcej przeciwników, których trzeba będzie poknować po kolei. 
