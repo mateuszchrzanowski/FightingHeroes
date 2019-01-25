@@ -10,6 +10,7 @@ namespace FightingHeroes
     {
         //PROPERTIES
         public string Name { get; set; }
+        public string CharacterClass { get; set; }
         public int Health { get; set; }
         public int Armor { get; set; }
         public int AttackMax { get; set; }
@@ -17,7 +18,13 @@ namespace FightingHeroes
         public Random rnd = new Random();
 
         //METHODS
-        public abstract void GetStats();
+        public virtual void GetStats()
+        {
+            Console.WriteLine($"Name: {Name} \n" +
+                        $"Character Class: {CharacterClass} \n" +
+                        $"Health: {Health} \n" +
+                        $"Armor: {Armor}");
+        }
         public abstract int Attack();
         public abstract int Block();
         public abstract int Defense();

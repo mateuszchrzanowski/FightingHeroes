@@ -15,7 +15,6 @@ namespace FightingHeroes
 
         public override int Attack()
         {
-            //int attack = 0;
             int attackType = 0;
 
             do
@@ -25,24 +24,19 @@ namespace FightingHeroes
                 $"[2] Axe (dmg: 3 - {AxeAttackMax}) \n" +
                 $"[3] Mace (dmg: 1 - {MaceAttackMax})");
 
-                //attack = Convert.ToInt32(Console.ReadKey().Key.ToString());
-                //Console.WriteLine();
                 ConsoleKeyInfo attack = Console.ReadKey();
 
                 switch (attack.KeyChar)
                 {
                     case '1':
-                        //Console.WriteLine("Sword");
                         Console.WriteLine();
                         attackType = SwordAttack();
                         break;
                     case '2':
-                        //Console.WriteLine("Axe");
                         Console.WriteLine();
                         attackType = AxeAttack();
                         break;
                     case '3':
-                        //Console.WriteLine("Mace");
                         Console.WriteLine();
                         attackType = MaceAttack();
                         break;
@@ -85,12 +79,9 @@ namespace FightingHeroes
 
         public override void GetStats()
         {
-            Console.WriteLine("\nYOUR CHARACTER: \n" +
-                        $"Name: {Name} \n" +
-                        "Class: Warrior \n" +
-                        $"Health: {Health} \n" +
-                        $"Armor: { Armor} \n" +
-                        $"Max Sword Damage: {SwordAttackMax} \n" +
+            Console.WriteLine("\nYOUR CHARACTER:");
+            base.GetStats();
+            Console.WriteLine($"Max Sword Damage: {SwordAttackMax} \n" +
                         $"Max Axe Damage: {AxeAttackMax} \n" +
                         $"Max Mace Damage: {MaceAttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | " +

@@ -17,7 +17,8 @@ namespace FightingHeroes
                                 "[Press any key]");
             Console.ReadKey();
             Console.WriteLine();
-            Console.WriteLine();
+
+            hero2.GetStats();
 
             while (true)
             {
@@ -61,11 +62,6 @@ namespace FightingHeroes
                 "[1] Attack \n" +
                 "[2] Defensife position");
 
-                //action = Convert.ToInt32(Console.ReadLine());
-                //Console.WriteLine();
-
-                //action = Convert.ToInt32(Console.ReadKey().KeyChar);
-                //Console.WriteLine(action);
                 ConsoleKeyInfo action = Console.ReadKey();
 
                 switch (action.KeyChar)
@@ -76,7 +72,6 @@ namespace FightingHeroes
                         break;
                     case '2':
                         Console.WriteLine();
-                        //Console.WriteLine("Defense");
                         actionType = "defense";
                         break;
                     default:

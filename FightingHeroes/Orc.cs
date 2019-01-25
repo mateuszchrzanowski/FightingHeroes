@@ -25,7 +25,10 @@ namespace FightingHeroes
 
         public override void GetStats()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("YOUR OPPONENT:");
+            base.GetStats();
+            Console.WriteLine($"Max Attack: {AttackMax} \n" +
+                        $"<H: {Health} | A: {Armor} | MA: {AttackMax}> \n\n");
         }
     }
 }

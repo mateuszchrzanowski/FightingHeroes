@@ -6,26 +6,19 @@ using System.Threading.Tasks;
 
 namespace FightingHeroes
 {
-    class Opponent : Hero
+    abstract class Opponent
     {
-        public override int Attack()
-        {
-            throw new NotImplementedException();
-        }
+        //PROPERTIES
+        public string Name { get; set; }
+        public int Health { get; set; }
+        public int Armor { get; set; }
+        public int AttackMax { get; set; }
 
-        public override int Block()
-        {
-            throw new NotImplementedException();
-        }
+        public Random rnd = new Random();
 
-        public override int Defense()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void GetStats()
-        {
-            throw new NotImplementedException();
-        }
+        //METHODS
+        public abstract void GetStats();
+        public abstract int Attack();
+        public abstract int Block();
     }
 }

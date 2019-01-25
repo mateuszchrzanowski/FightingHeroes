@@ -16,7 +16,6 @@ namespace FightingHeroes
         //METHODS
         public override int Attack()
         {
-            //int attack = 0;
             int attackType = 0;
 
             do
@@ -26,25 +25,19 @@ namespace FightingHeroes
                 $"[2] Lightning (dmg: 2 - {LightningAttackMax})\n" +
                 $"[3] Wild Fire (dmg: 1 - {WildFireAttackMax})");
 
-                //attack = Convert.ToInt32(Console.ReadLine());
-                //attack = Convert.ToInt32(Console.ReadKey().Key.ToString());
-                //Console.WriteLine();
                 ConsoleKeyInfo attack = Console.ReadKey();
 
                 switch (attack.KeyChar)
                 {
                     case '1':
-                        //Console.WriteLine("Fireball");
                         Console.WriteLine();
                         attackType = FireballAttack();
                         break;
                     case '2':
-                        //Console.WriteLine("Lightning");
                         Console.WriteLine();
                         attackType = LightningAttack();
                         break;
                     case '3':
-                        //Console.WriteLine("Wild Fire");
                         Console.WriteLine();
                         attackType = WildFireAttack();
                         break;
@@ -87,12 +80,9 @@ namespace FightingHeroes
 
         public override void GetStats()
         {
-            Console.WriteLine("\nYOUR CHARACTER: \n" +
-                        $"Name: {Name} \n" +
-                        "Class: Wizard \n" +
-                        $"Health: {Health} \n" +
-                        $"Armor: {Armor} \n" +
-                        $"Max Fireball Damage: {FireballAttackMax} \n" +
+            Console.WriteLine("\nYOUR CHARACTER:");
+            base.GetStats();
+            Console.WriteLine($"Max Fireball Damage: {FireballAttackMax} \n" +
                         $"Max Lightning Damage: {LightningAttackMax} \n" +
                         $"Max Wild Fire Damage: {WildFireAttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | MFD: {FireballAttackMax} | " +

@@ -31,17 +31,27 @@ namespace FightingHeroes
          * Zrobić tryb multiplayer
          * 
          * zrobić więcej postaci
+         * 
+         * 
         */
 
+        //DONE:
+        /*
+         * Added CharacterClass property in Hero class,
+         * Edited GetStats method (changed abstract to virtual),
+         * Deleted useless, commented code.
+         * 
+         */
 
         static void Main(string[] args)
         {
             Hero urukhai = new Orc()
             {
                 Name = "Uruk-hai",
+                CharacterClass = "Orc",
                 Health = 30,
+                Armor = 7,
                 AttackMax = 11,
-                Armor = 7
             };
 
             switch (Intro.StartGame())
@@ -50,11 +60,12 @@ namespace FightingHeroes
                     Hero wizard = new Wizard()
                     {
                         Name = Intro.GetName(),
+                        CharacterClass = "Wizard",
                         Health = 30,
+                        Armor = 7,
                         FireballAttackMax = 13,
                         LightningAttackMax = 15,
                         WildFireAttackMax = 17,
-                        Armor = 7
                     };
                     wizard.GetStats();
 
@@ -64,11 +75,12 @@ namespace FightingHeroes
                     Hero warrior = new Warrior()
                     {
                         Name = Intro.GetName(),
+                        CharacterClass = "Warrior",
                         Health = 35,
+                        Armor = 8,
                         SwordAttackMax = 10,
                         AxeAttackMax = 12,
                         MaceAttackMax = 15,
-                        Armor = 8
                     };
                     warrior.GetStats();
 
