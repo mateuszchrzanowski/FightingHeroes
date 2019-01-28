@@ -11,17 +11,20 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
+         * //Zamiast StartFight() w poniższym switchu uruchomię metodę Journey.StartJourney()
+                    //będzie mały opis świata, może wybory WEST/EAST
+                    //wewnątrz metody StartJourney() będzie wywoływanie metody StartFight z różnymi przeciwnikami
+                    //np.: Battle.StartFight(warrior, orc), Battle.StartFight(warrior, troll)
+                    //instancje klasy Hero dla przeciwników będą musiały być tworzone gdzie indziej.
+                    //może w metodzie StartJourney()?
          * 
-         * Zrobić klasę Opponent - będzie więcej przeciwników, których trzeba będzie poknować po kolei. 
+         * Będzie więcej przeciwników, których trzeba będzie poknować po kolei. 
          * 
-         * Chyba będą dwie osobne klasy: Opponent i Hero.
-         * Warrior i Wizard (i inne postacie do gry) będą dziedziczyc po Hero, a przeciwnicy po Opponent. 
-         * Trzeba będzie przerobić klasę Battle.cs
          * 
          * Opponent : Hero
          * Properties: Name, Helath, Armor, AttackMax
          * Methods: Attack i Block na pewno
-         * Potem np Orc : Opponent; Troll : Opponent; Skeleton : Opponent; Zombie : Opponent; Ancient Deamon : Opponent itd
+         * Potem np Orc : Hero; Troll : Hero; Skeleton : Hero; Zombie : Hero; Ancient Deamon : Hero itd
          * 
          * Droga do bossa. Opisy i wybory gdzie chcesz iść (np. East or West).
          * 
@@ -37,9 +40,8 @@ namespace FightingHeroes
 
         //DONE:
         /*
-         * Added CharacterClass property in Hero class,
-         * Edited GetStats method (changed abstract to virtual),
-         * Deleted useless, commented code.
+         * Added folders (Character, Player, Opponent, Game). Added new class: Journey.cs and some comments.
+         * Added  new class: Troll.cs and method StartJourney()
          * 
          */
 
@@ -86,6 +88,12 @@ namespace FightingHeroes
 
                     Battle.StartFight(warrior, urukhai);
                     break;
+                    //Tutaj zamiast StartFight() uruchomię metodę Journey.StartJourney()
+                    //będzie mały opis świata, może wybory WEST/EAST
+                    //wewnątrz metody StartJourney() będzie wywoływanie metody StartFight z różnymi przeciwnikami
+                    //np.: Battle.StartFight(warrior, orc), Battle.StartFight(warrior, troll)
+                    //instancje klasy Hero dla przeciwników będą musiały być tworzone gdzie indziej.
+                    //może w metodzie StartJourney()?
             }
 
             Console.ReadLine();
