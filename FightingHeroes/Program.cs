@@ -40,13 +40,13 @@ namespace FightingHeroes
 
         //DONE:
         /*
-         * Added folders (Character, Player, Opponent, Game). Added new class: Journey.cs and some comments.
-         * Added  new class: Troll.cs and method StartJourney()
+         * Updated StartJourney() method - added switch with directions. Added ChooseDirection() method - WORK IN PROGRESS
          * 
          */
 
         static void Main(string[] args)
         {
+            /*
             Hero urukhai = new Orc()
             {
                 Name = "Uruk-hai",
@@ -55,6 +55,7 @@ namespace FightingHeroes
                 Armor = 7,
                 AttackMax = 11,
             };
+            */
 
             switch (Intro.StartGame())
             {
@@ -71,7 +72,8 @@ namespace FightingHeroes
                     };
                     wizard.GetStats();
 
-                    Battle.StartFight(wizard, urukhai);
+                    //Battle.StartFight(wizard, urukhai);
+                    Journey.StartJourney(wizard);
                     break;
                 case "warrior":
                     Hero warrior = new Warrior()
@@ -86,7 +88,7 @@ namespace FightingHeroes
                     };
                     warrior.GetStats();
 
-                    Battle.StartFight(warrior, urukhai);
+                    //Battle.StartFight(warrior, urukhai);
                     break;
                     //Tutaj zamiast StartFight() uruchomię metodę Journey.StartJourney()
                     //będzie mały opis świata, może wybory WEST/EAST

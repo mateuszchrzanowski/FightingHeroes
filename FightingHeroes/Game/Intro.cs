@@ -18,13 +18,12 @@ namespace FightingHeroes
 
             do
             {
-                Console.WriteLine("Choose your character:\n" +
+                Console.WriteLine("Choose your character: \n" +
                 "[W] WARRIOR\n" +
                 "[D] WIZARD");
 
                 userCharacterChoice = Console.ReadKey().Key.ToString();
                 Console.WriteLine();
-
 
                 switch (userCharacterChoice.ToUpper())
                 {
@@ -36,7 +35,7 @@ namespace FightingHeroes
                         break;
                     default:
                         userCharacterChoiceResult = "error";
-                        Console.WriteLine("\nWrong input. Please try again.\n");
+                        Console.WriteLine("\nWrong input. Please try again. \n");
                         break;
                 }
             }
