@@ -11,18 +11,12 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
-         * Po Battle.StartFight() nie będzie końca gry. W klasie Journey.cs można pociągnąć grę dalej.
-         * w każdej metodzie ...Scenario() po wywołaniu Battle.StartFight() wrzucimy kolejny wybór drogi
-         * 
-         * //Zamiast StartFight() w poniższym switchu uruchomię metodę Journey.StartJourney()
-                    //będzie mały opis świata, może wybory WEST/EAST
-                    //wewnątrz metody StartJourney() będzie wywoływanie metody StartFight z różnymi przeciwnikami
-                    //np.: Battle.StartFight(warrior, orc), Battle.StartFight(warrior, troll)
-                    //instancje klasy Hero dla przeciwników będą musiały być tworzone gdzie indziej.
-                    //może w metodzie StartJourney()?
+         * Zmienić metodę Battle.StartFight() - aktualnie po śmierci bohatera można wybierąc kolejne lokacje w Journey.cs.
+         * Trzeba to zmienić na Game Over!
          * 
          * Health nie będzie się odnawiać po każdym przeciwniku. Zrobimy za to Life Potion.
          * Będzie można odnowić Health (albo na maxa albo np +5. jescze nie wiem)
+         * 
          * 
          * Zrobić tryb multiplayer
          * 
@@ -34,10 +28,9 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Updated Journey.cs class - added GetMountainsScenario() and GetSwampsScenario() methods.
-         * Deleted ChooseDirection() method.
-         * Deleted Opponent.cs class.
-         * Deleted useless commented code.
+         * Updated GetMountainsScenario() and GetSwampsScenario() methods.
+         * Added GetCaveScenario() and GetBurialScenario()
+         * Added Manticore.cs and Zombie.cs
          * 
          */
 
