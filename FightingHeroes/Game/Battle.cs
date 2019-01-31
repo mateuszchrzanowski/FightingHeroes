@@ -17,6 +17,7 @@ namespace FightingHeroes
                                 "[Press any key]");
             Console.ReadKey();
             Console.WriteLine();
+            Console.WriteLine();
 
             hero2.GetStats();
 

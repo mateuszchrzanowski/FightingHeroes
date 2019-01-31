@@ -11,22 +11,15 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
+         * Po Battle.StartFight() nie będzie końca gry. W klasie Journey.cs można pociągnąć grę dalej.
+         * w każdej metodzie ...Scenario() po wywołaniu Battle.StartFight() wrzucimy kolejny wybór drogi
+         * 
          * //Zamiast StartFight() w poniższym switchu uruchomię metodę Journey.StartJourney()
                     //będzie mały opis świata, może wybory WEST/EAST
                     //wewnątrz metody StartJourney() będzie wywoływanie metody StartFight z różnymi przeciwnikami
                     //np.: Battle.StartFight(warrior, orc), Battle.StartFight(warrior, troll)
                     //instancje klasy Hero dla przeciwników będą musiały być tworzone gdzie indziej.
                     //może w metodzie StartJourney()?
-         * 
-         * Będzie więcej przeciwników, których trzeba będzie poknować po kolei. 
-         * 
-         * 
-         * Opponent : Hero
-         * Properties: Name, Helath, Armor, AttackMax
-         * Methods: Attack i Block na pewno
-         * Potem np Orc : Hero; Troll : Hero; Skeleton : Hero; Zombie : Hero; Ancient Deamon : Hero itd
-         * 
-         * Droga do bossa. Opisy i wybory gdzie chcesz iść (np. East or West).
          * 
          * Health nie będzie się odnawiać po każdym przeciwniku. Zrobimy za to Life Potion.
          * Będzie można odnowić Health (albo na maxa albo np +5. jescze nie wiem)
@@ -40,23 +33,16 @@ namespace FightingHeroes
 
         //DONE:
         /*
-         * Updated StartJourney() method - added switch with directions. Added ChooseDirection() method - WORK IN PROGRESS
+         * 
+         * Updated Journey.cs class - added GetMountainsScenario() and GetSwampsScenario() methods.
+         * Deleted ChooseDirection() method.
+         * Deleted Opponent.cs class.
+         * Deleted useless commented code.
          * 
          */
 
         static void Main(string[] args)
         {
-            /*
-            Hero urukhai = new Orc()
-            {
-                Name = "Uruk-hai",
-                CharacterClass = "Orc",
-                Health = 30,
-                Armor = 7,
-                AttackMax = 11,
-            };
-            */
-
             switch (Intro.StartGame())
             {
                 case "wizard":
@@ -71,8 +57,6 @@ namespace FightingHeroes
                         WildFireAttackMax = 17,
                     };
                     wizard.GetStats();
-
-                    //Battle.StartFight(wizard, urukhai);
                     Journey.StartJourney(wizard);
                     break;
                 case "warrior":
@@ -87,15 +71,8 @@ namespace FightingHeroes
                         MaceAttackMax = 15,
                     };
                     warrior.GetStats();
-
-                    //Battle.StartFight(warrior, urukhai);
+                    Journey.StartJourney(warrior);
                     break;
-                    //Tutaj zamiast StartFight() uruchomię metodę Journey.StartJourney()
-                    //będzie mały opis świata, może wybory WEST/EAST
-                    //wewnątrz metody StartJourney() będzie wywoływanie metody StartFight z różnymi przeciwnikami
-                    //np.: Battle.StartFight(warrior, orc), Battle.StartFight(warrior, troll)
-                    //instancje klasy Hero dla przeciwników będą musiały być tworzone gdzie indziej.
-                    //może w metodzie StartJourney()?
             }
 
             Console.ReadLine();

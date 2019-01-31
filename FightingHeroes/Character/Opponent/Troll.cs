@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FightingHeroes.Character.Opponent
+namespace FightingHeroes
 {
     class Troll : Hero
     {

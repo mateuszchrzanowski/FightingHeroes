@@ -21,7 +21,7 @@ namespace FightingHeroes
 
             Console.WriteLine("You have been banished from your hometown. \n" +
                 "Now you are standing in the middle of deep dark woods. \n" +
-                "You can go east into to the MOUNTAINS or west to the SWAMPS near the old burial ground.");
+                "You can go east into to the MOUNTAINS or west to the SWAMPS near the old burial ground.\n");
 
             do
             {
@@ -36,10 +36,11 @@ namespace FightingHeroes
                 {
                     case "M":
                         userDirectionChoiceResult = "mountains";
-                        MountainsSwampsJourney(playerHero);
+                        GetMountainsScenario(playerHero);
                         break;
                     case "S":
                         userDirectionChoiceResult = "swamps";
+                        GetSwampsScenario(playerHero);
                         break;
                     default:
                         userDirectionChoiceResult = "error";
@@ -53,67 +54,43 @@ namespace FightingHeroes
             
         }
 
-        public static void ChooseDirection()
+        public static void GetMountainsScenario(Hero playerHero)
         {
-            string userDirectionChoice;
-            string userDirectionChoiceResult = "";
+            Console.WriteLine("\nIn the mountains you are attacked by a troll! \n" +
+                "You have to defend yourself!");
+            Console.WriteLine();
 
-            do
+            Hero troll = new Troll()
             {
-                Console.WriteLine("Choose direction of your journey: \n" +
-                "[M] Mountains \n" +
-                "[S] Swamps");
+                Name = "Garatah",
+                CharacterClass = "Troll",
+                Health = 35,
+                Armor = 5,
+                AttackMax = 12,
+            };
 
-                userDirectionChoice = Console.ReadKey().Key.ToString();
-                Console.WriteLine();
+            Battle.StartFight(playerHero, troll);
 
-                switch (userDirectionChoice.ToUpper())
-                {
-                    case "M":
-                        Console.WriteLine("In the mountains you are attacked by an orc!");
-                        Hero urukhai = new Orc()
-                        {
-                            Name = "Uruk-hai",
-                            CharacterClass = "Orc",
-                            Health = 30,
-                            Armor = 7,
-                            AttackMax = 11,
-                        };
-                        Battle.StartFight(playerHero, urukhai);
-                        break;
-                    case "S":
-                        userDirectionChoiceResult = "swamps";
-                        break;
-                    default:
-                        userDirectionChoiceResult = "error";
-                        Console.WriteLine("\nWrong input. Please try again. \n");
-                        break;
-                }
-            }
-            while (userDirectionChoiceResult == "error");
+            Console.WriteLine("Do you wanna play further?");
+            Console.ReadKey();
         }
 
-        /*
-        public static string MountainsSwampsJourney(Hero playerHero, string direction)
+        public static void GetSwampsScenario(Hero playerHero)
         {
-            switch (StartJourney(playerHero))
-            {
-                case "mountains":
-                    Console.WriteLine("In the mountains you are attacked by an orc!");
-                    Hero urukhai = new Orc()
-                    {
-                        Name = "Uruk-hai",
-                        CharacterClass = "Orc",
-                        Health = 30,
-                        Armor = 7,
-                        AttackMax = 11,
-                    };
-                    Battle.StartFight(playerHero, urukhai);
-                    break;
-            }
+            Console.WriteLine("\nIn the swamps you are attacked by a orc! \n" +
+                "You have to defend yourself!");
+            Console.WriteLine();
 
-            return "return";
+            Hero orc = new Orc()
+            {
+                Name = "Uruk-hai",
+                CharacterClass = "Orc",
+                Health = 30,
+                Armor = 7,
+                AttackMax = 11,
+            };
+
+            Battle.StartFight(playerHero, orc);
         }
-        */
     }
 }
