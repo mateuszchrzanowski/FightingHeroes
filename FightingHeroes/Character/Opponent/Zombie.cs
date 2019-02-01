@@ -15,7 +15,7 @@ namespace FightingHeroes
 
         public override int Block()
         {
-            return rnd.Next(4, Armor);
+            return rnd.Next(1, Armor);
         }
 
         public override int Defense()

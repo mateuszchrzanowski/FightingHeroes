@@ -72,12 +72,20 @@ namespace FightingHeroes
                 AttackMax = 12,
             };
 
-            Battle.StartFight(playerHero, troll);
+            //Battle.StartFight(playerHero, troll);
 
-            Console.WriteLine();
-            Console.WriteLine("You have defeated mighty troll from the mountains.\n" +
-                "Now you can continue your journey.\n" +
-                "You can go north to the ANCIENT CAVE or west to the SWAMPS near the old burial ground.\n");
+            if(IsHeroAlive(playerHero, troll))
+            {
+                Console.WriteLine();
+                Console.WriteLine("You have defeated mighty troll from the mountains.\n" +
+                    "Now you can continue your journey.\n" +
+                    "You can go north to the ANCIENT CAVE or west to the SWAMPS near the old burial ground.\n");
+            }
+            else
+            {
+                Console.WriteLine("END!");
+            }
+            
 
             do
             {
@@ -272,6 +280,18 @@ namespace FightingHeroes
             while (userDirectionChoiceResult == "error");
 
             return userDirectionChoiceResult;
+        }
+
+        public static bool IsHeroAlive(Hero playerHero, Hero opponent)
+        {
+            if (Battle.StartFight(playerHero, opponent) == "Game Over!")
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

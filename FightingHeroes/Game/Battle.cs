@@ -9,7 +9,7 @@ namespace FightingHeroes
     class Battle
     {
         //METHODS
-        public static void StartFight(Hero hero1, Hero hero2)
+        public static string StartFight(Hero hero1, Hero hero2)
         {
             int roundNumber = 0;
 
@@ -27,15 +27,17 @@ namespace FightingHeroes
                 Console.WriteLine($"-----------Round: {roundNumber}-------------");
                 if (GetAction() == "attack")
                 {
-                    if (GetAttackResult(hero1, hero2) == "Game Over!")
+                    if (GetAttackResult(hero1, hero2) == "Fight Over!")
                     {
-                        Console.WriteLine("Game Over!");
-                        break;
+                        //Console.WriteLine("You win!");
+                        return "You Win!";
+                        //break;
                     }
                     else if (GetAttackResult(hero2, hero1) == "Game Over!")
                     {
-                        Console.WriteLine("Game Over!");
-                        break;
+                        //Console.WriteLine("Game Over!");
+                        return "Game Over!";
+                        //break;
                     }
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
@@ -44,8 +46,9 @@ namespace FightingHeroes
                 {
                     if(GetDefenseResult(hero1, hero2) == "Game Over!")
                     {
-                        Console.WriteLine("Game Over!");
-                        break;
+                        //Console.WriteLine("Game Over!");
+                        return "Game Over!";
+                        //break;
                     }
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
@@ -114,7 +117,7 @@ namespace FightingHeroes
 
                 Console.WriteLine();
                 Console.WriteLine($"{heroB.Name} died! {heroA.Name} is victorius!");
-                return "Game Over!";
+                return "Fight Over!";
             }
             else
             {

@@ -28,9 +28,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Updated GetMountainsScenario() and GetSwampsScenario() methods.
-         * Added GetCaveScenario() and GetBurialScenario()
-         * Added Manticore.cs and Zombie.cs
+         * Added IsHeroAllive() method. Started work on player hero death result.
          * 
          */
 
@@ -43,7 +41,7 @@ namespace FightingHeroes
                     {
                         Name = Intro.GetName(),
                         CharacterClass = "Wizard",
-                        Health = 30,
+                        Health = 999,//30,
                         Armor = 7,
                         FireballAttackMax = 13,
                         LightningAttackMax = 15,
