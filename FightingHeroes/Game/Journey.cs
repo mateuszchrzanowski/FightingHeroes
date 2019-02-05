@@ -83,7 +83,10 @@ namespace FightingHeroes
             }
             else
             {
-                Console.WriteLine("END!");
+                Console.WriteLine("You have been defeated! \n" +
+                    "[Press any key to exit game]");
+                Console.ReadKey();
+                Environment.Exit(0);
             }
             
 

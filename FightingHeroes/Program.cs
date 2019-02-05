@@ -17,6 +17,7 @@ namespace FightingHeroes
          * Health nie będzie się odnawiać po każdym przeciwniku. Zrobimy za to Life Potion.
          * Będzie można odnowić Health (albo na maxa albo np +5. jescze nie wiem)
          * 
+         * Pozmieniać kolory tekstu
          * 
          * Zrobić tryb multiplayer
          * 
@@ -28,7 +29,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Added IsHeroAllive() method. Started work on player hero death result.
+         * Working on player hero death result.
          * 
          */
 
