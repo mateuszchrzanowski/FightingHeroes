@@ -86,6 +86,7 @@ namespace FightingHeroes
                 Console.WriteLine("You have been defeated! \n" +
                     "[Press any key to exit game]");
                 Console.ReadKey();
+
                 Environment.Exit(0);
             }
             
@@ -138,12 +139,23 @@ namespace FightingHeroes
                 AttackMax = 11,
             };
 
-            Battle.StartFight(playerHero, orc);
+            //Battle.StartFight(playerHero, orc);
 
-            Console.WriteLine();
-            Console.WriteLine("You have defeated wild orc from the swamps.\n" +
-                "Now you can continue your journey.\n" +
-                "You can go north to the OLD BURIAL GROUND or east into the MOUNTAINS.\n");
+            if (IsHeroAlive(playerHero, orc))
+            {
+                Console.WriteLine();
+                Console.WriteLine("You have defeated wild orc from the swamps.\n" +
+                    "Now you can continue your journey.\n" +
+                    "You can go north to the OLD BURIAL GROUND or east into the MOUNTAINS.\n");
+            }
+            else
+            {
+                Console.WriteLine("You have been defeated! \n" +
+                    "[Press any key to exit game]");
+                Console.ReadKey();
+
+                Environment.Exit(0);
+            }
 
             do
             {
@@ -193,12 +205,23 @@ namespace FightingHeroes
                 AttackMax = 12,
             };
 
-            Battle.StartFight(playerHero, manticore);
+            //Battle.StartFight(playerHero, manticore);
 
-            Console.WriteLine();
-            Console.WriteLine("You have defeated great manticore from the ancient cave.\n" +
-                "Now you can continue your journey.\n" +
-                "You can go west to the OLD BURIAL GROUND or south into the MOUNTAINS.\n");
+            if (IsHeroAlive(playerHero, manticore))
+            {
+                Console.WriteLine();
+                Console.WriteLine("You have defeated great manticore from the ancient cave.\n" +
+                    "Now you can continue your journey.\n" +
+                    "You can go west to the OLD BURIAL GROUND or south into the MOUNTAINS.\n");
+            }
+            else
+            {
+                Console.WriteLine("You have been defeated! \n" +
+                    "[Press any key to exit game]");
+                Console.ReadKey();
+
+                Environment.Exit(0);
+            }
 
             do
             {
@@ -248,12 +271,23 @@ namespace FightingHeroes
                 AttackMax = 13,
             };
 
-            Battle.StartFight(playerHero, zombie);
+            //Battle.StartFight(playerHero, zombie);
 
-            Console.WriteLine();
-            Console.WriteLine("You have defeated rotten zombie from the old burial ground.\n" +
-                "Now you can continue your journey.\n" +
-                "You can go east to the ANCIET CAVE or south into the SWAMPS.\n");
+            if (IsHeroAlive(playerHero, zombie))
+            {
+                Console.WriteLine();
+                Console.WriteLine("You have defeated rotten zombie from the old burial ground.\n" +
+                    "Now you can continue your journey.\n" +
+                    "You can go east to the ANCIET CAVE or south into the SWAMPS.\n");
+            }
+            else
+            {
+                Console.WriteLine("You have been defeated! \n" +
+                    "[Press any key to exit game]");
+                Console.ReadKey();
+
+                Environment.Exit(0);
+            }
 
             do
             {

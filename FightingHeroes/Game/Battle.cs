@@ -27,7 +27,7 @@ namespace FightingHeroes
                 Console.WriteLine($"-----------Round: {roundNumber}-------------");
                 if (GetAction() == "attack")
                 {
-                    if (GetAttackResult(hero1, hero2) == "Fight Over!")
+                    if (GetAttackResult(hero1, hero2) == "You Win!")
                     {
                         //Console.WriteLine("You win!");
                         return "You Win!";
@@ -117,7 +117,7 @@ namespace FightingHeroes
 
                 Console.WriteLine();
                 Console.WriteLine($"{heroB.Name} died! {heroA.Name} is victorius!");
-                return "Fight Over!";
+                return "You Win!";
             }
             else
             {

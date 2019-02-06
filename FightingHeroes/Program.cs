@@ -11,6 +11,8 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
+         * tymczasowo wizard ma 999 hp - pamiętać o tym
+         * 
          * Zmienić metodę Battle.StartFight() - aktualnie po śmierci bohatera można wybierąc kolejne lokacje w Journey.cs.
          * Trzeba to zmienić na Game Over!
          * 
@@ -29,7 +31,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Working on player hero death result.
+         * Implement IsHeroAllive() method in all 'GetScenarios'. After playerHero's death game will shut down.
          * 
          */
 
