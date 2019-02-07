@@ -30,5 +30,10 @@ namespace FightingHeroes
             Console.WriteLine($"Max Attack: {AttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | MA: {AttackMax}> \n\n");
         }
+
+        public override void RestoreHealth(int health)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -87,5 +87,20 @@ namespace FightingHeroes
                         $"<H: {Health} | A: {Armor} | " +
                         $"MSD: {SwordAttackMax} | MAD: {AxeAttackMax} | MMD: {MaceAttackMax}> \n");
         }
+
+        public override void RestoreHealth(int playerActualHealth)
+        {
+            /*
+            if (playerActualHealth < (Health - 5))
+            {
+                Health = playerActualHealth + 5;
+            }
+            else if(playerActualHealth > (Health - 5) && playerActualHealth < Health)
+            {
+                Health = playerActualHealth;
+            }
+            */
+
+        }
     }
 }

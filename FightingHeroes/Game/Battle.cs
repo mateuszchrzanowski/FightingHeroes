@@ -25,7 +25,8 @@ namespace FightingHeroes
             {
                 roundNumber++;
                 Console.WriteLine($"-----------Round: {roundNumber}-------------");
-                if (GetAction() == "attack")
+                string getAction = GetAction();
+                if (getAction == "attack")
                 {
                     if (GetAttackResult(hero1, hero2) == "You Win!")
                     {
@@ -42,7 +43,7 @@ namespace FightingHeroes
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
-                else
+                else if(getAction == "defense")
                 {
                     if(GetDefenseResult(hero1, hero2) == "Game Over!")
                     {
@@ -50,6 +51,13 @@ namespace FightingHeroes
                         return "Game Over!";
                         //break;
                     }
+                    Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
+                    Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
+                }
+                else if(getAction == "health")
+                {
+                    hero1.RestoreHealth(hero1.Health);
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
@@ -64,7 +72,8 @@ namespace FightingHeroes
             {
                 Console.WriteLine("Select your action: \n" +
                 "[1] Attack \n" +
-                "[2] Defensife position");
+                "[2] Defensife position \n" +
+                "[3] Health potion");
 
                 ConsoleKeyInfo action = Console.ReadKey();
 
@@ -77,6 +86,10 @@ namespace FightingHeroes
                     case '2':
                         Console.WriteLine();
                         actionType = "defense";
+                        break;
+                    case '3':
+                        Console.WriteLine();
+                        actionType = "health";
                         break;
                     default:
                         actionType = "error";

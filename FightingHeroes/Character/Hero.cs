@@ -28,9 +28,6 @@ namespace FightingHeroes
         public abstract int Attack();
         public abstract int Block();
         public abstract int Defense();
-
-
-
-        
+        public abstract void RestoreHealth(int health);  
     }
 }

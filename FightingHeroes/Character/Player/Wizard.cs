@@ -88,5 +88,10 @@ namespace FightingHeroes
                         $"<H: {Health} | A: {Armor} | MFD: {FireballAttackMax} | " +
                         $"MLD: {LightningAttackMax} | MWFD: {WildFireAttackMax}> \n");
         }
+
+        public override void RestoreHealth(int health)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

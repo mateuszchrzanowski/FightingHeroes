@@ -13,9 +13,6 @@ namespace FightingHeroes
          * 
          * tymczasowo wizard ma 999 hp - pamiętać o tym
          * 
-         * Zmienić metodę Battle.StartFight() - aktualnie po śmierci bohatera można wybierąc kolejne lokacje w Journey.cs.
-         * Trzeba to zmienić na Game Over!
-         * 
          * Health nie będzie się odnawiać po każdym przeciwniku. Zrobimy za to Life Potion.
          * Będzie można odnowić Health (albo na maxa albo np +5. jescze nie wiem)
          * 
@@ -31,7 +28,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Implement IsHeroAllive() method in all 'GetScenarios'. After playerHero's death game will shut down.
+         * Add RestoreHealth() method in Hero.cs class. Working on implement RestoreHealth() method in battle process.
          * 
          */
 
