@@ -90,17 +90,14 @@ namespace FightingHeroes
 
         public override void RestoreHealth(int playerActualHealth)
         {
-            /*
-            if (playerActualHealth < (Health - 5))
+            if (playerActualHealth < 30)
             {
-                Health = playerActualHealth + 5;
+                Health += 5;
             }
-            else if(playerActualHealth > (Health - 5) && playerActualHealth < Health)
+            else if(playerActualHealth > 30 && playerActualHealth < 35)
             {
-                Health = playerActualHealth;
+                Health = 35;
             }
-            */
-
         }
     }
 }

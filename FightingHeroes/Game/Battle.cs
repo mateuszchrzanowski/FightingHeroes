@@ -56,8 +56,12 @@ namespace FightingHeroes
                 }
                 else if(getAction == "health")
                 {
-                    hero1.RestoreHealth(hero1.Health);
-
+                    if (GetHealthPotionResult(hero1, hero2) == "Game Over!")
+                    {
+                        //Console.WriteLine("Game Over!");
+                        return "Game Over!";
+                        //break;
+                    }
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
@@ -73,7 +77,7 @@ namespace FightingHeroes
                 Console.WriteLine("Select your action: \n" +
                 "[1] Attack \n" +
                 "[2] Defensife position \n" +
-                "[3] Health potion");
+                "[3] Health Potion");
 
                 ConsoleKeyInfo action = Console.ReadKey();
 
@@ -157,6 +161,50 @@ namespace FightingHeroes
 
             Console.WriteLine($"{heroB.Name} attacks {heroA.Name} ({heroBAttack})");
             Console.WriteLine($"{heroA.Name} blocks ({heroADefense})");
+            Console.WriteLine($"{heroB.Name} deals damage ({dealedDamage})");
+
+            if (heroA.Health <= 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine($"{heroA.Name} <H: {heroA.Health}>");
+                Console.WriteLine($"{heroB.Name} <H: {heroB.Health}>");
+
+                Console.WriteLine();
+                Console.WriteLine($"{heroA.Name} died! {heroB.Name} is victorius!");
+                return "Game Over!";
+            }
+            else
+            {
+                return "Fight Again!";
+            }
+        }
+
+        public static string GetHealthPotionResult(Hero heroA, Hero heroB)
+        {
+            //heroA - player
+            //heroB - opponent
+
+            int heroABlock = heroA.Block();
+            int heroBAttack = heroB.Attack();
+            int dealedDamage = heroBAttack - heroABlock;
+
+            heroA.RestoreHealth(heroA.Health);
+
+            if (dealedDamage > 0)
+            {
+                heroA.Health = heroA.Health - dealedDamage;
+            }
+            else
+            {
+                dealedDamage = 0;
+            }
+
+            Console.WriteLine($"\n{heroA.Name} uses Health Potion. He is able to restore 5 health points. \n");
+
+            Console.WriteLine($"{heroA.Name} <H: {heroA.Health}> \n");
+
+            Console.WriteLine($"{heroB.Name} attacks {heroA.Name} ({heroBAttack})");
+            Console.WriteLine($"{heroA.Name} blocks ({heroABlock})");
             Console.WriteLine($"{heroB.Name} deals damage ({dealedDamage})");
 
             if (heroA.Health <= 0)

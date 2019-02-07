@@ -11,7 +11,10 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
+         * coś nie tak jest z tym RestoreHealth() - raz dodaje 5 hp, raz nie...
+         * 
          * tymczasowo wizard ma 999 hp - pamiętać o tym
+         * 
          * 
          * Health nie będzie się odnawiać po każdym przeciwniku. Zrobimy za to Life Potion.
          * Będzie można odnowić Health (albo na maxa albo np +5. jescze nie wiem)
@@ -28,7 +31,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Add RestoreHealth() method in Hero.cs class. Working on implement RestoreHealth() method in battle process.
+         * Working on implement RestoreHealth() method in battle process.
          * 
          */
 
