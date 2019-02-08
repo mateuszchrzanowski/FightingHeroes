@@ -6,24 +6,23 @@ using System.Threading.Tasks;
 
 namespace FightingHeroes.Character.Player
 {
-    class Wizard : Hero
+    class Hunter : Hero
     {
         //PROPERTIES
-        public int FireballAttackMax { get; set; }
-        public int LightningAttackMax { get; set; }
-        public int WildFireAttackMax { get; set; }
+        public int DaggerAttackMax { get; set; }
+        public int BowAttackMax { get; set; }
+        public int CrossbowAttackMax { get; set; }
 
-        //METHODS
         public override int Attack()
         {
             int attackType = 0;
 
             do
             {
-                Console.WriteLine("\nSelect your attack type:\n" +
-                $"[1] Fireball (dmg: 4 - {FireballAttackMax})\n" +
-                $"[2] Lightning (dmg: 2 - {LightningAttackMax})\n" +
-                $"[3] Wild Fire (dmg: 1 - {WildFireAttackMax})");
+                Console.WriteLine("\nSelect your attack type: \n" +
+                $"[1] Dagger (dmg: 5 - {DaggerAttackMax}) \n" +
+                $"[2] Bow (dmg: 3 - {BowAttackMax}) \n" +
+                $"[3] Crossbow (dmg: 1 - {CrossbowAttackMax})");
 
                 ConsoleKeyInfo attack = Console.ReadKey();
 
@@ -31,15 +30,15 @@ namespace FightingHeroes.Character.Player
                 {
                     case '1':
                         Console.WriteLine();
-                        attackType = FireballAttack();
+                        attackType = DaggerAttack();
                         break;
                     case '2':
                         Console.WriteLine();
-                        attackType = LightningAttack();
+                        attackType = BowAttack();
                         break;
                     case '3':
                         Console.WriteLine();
-                        attackType = WildFireAttack();
+                        attackType = CrossbowAttack();
                         break;
                     default:
                         attackType = 0;
@@ -54,19 +53,19 @@ namespace FightingHeroes.Character.Player
         }
 
         //METHODS
-        public int FireballAttack()
+        public int DaggerAttack()
         {
-            return rnd.Next(4, FireballAttackMax);
+            return rnd.Next(5, DaggerAttackMax);
         }
 
-        public int LightningAttack()
+        public int BowAttack()
         {
-            return rnd.Next(2, LightningAttackMax);
+            return rnd.Next(3, BowAttackMax);
         }
 
-        public int WildFireAttack()
+        public int CrossbowAttack()
         {
-            return rnd.Next(1, WildFireAttackMax);
+            return rnd.Next(2, CrossbowAttackMax);
         }
 
         public override int Block()
@@ -83,22 +82,22 @@ namespace FightingHeroes.Character.Player
         {
             Console.WriteLine("\nYOUR CHARACTER:");
             base.GetStats();
-            Console.WriteLine($"Max Fireball Damage: {FireballAttackMax} \n" +
-                        $"Max Lightning Damage: {LightningAttackMax} \n" +
-                        $"Max Wild Fire Damage: {WildFireAttackMax} \n" +
-                        $"<H: {Health} | A: {Armor} | MFD: {FireballAttackMax} | " +
-                        $"MLD: {LightningAttackMax} | MWFD: {WildFireAttackMax}> \n");
+            Console.WriteLine($"Max Sword Damage: {DaggerAttackMax} \n" +
+                        $"Max Axe Damage: {BowAttackMax} \n" +
+                        $"Max Mace Damage: {CrossbowAttackMax} \n" +
+                        $"<H: {Health} | A: {Armor} | " +
+                        $"MSD: {DaggerAttackMax} | MAD: {BowAttackMax} | MMD: {CrossbowAttackMax}> \n");
         }
 
         public override int RestoreHealth(int playerActualHealth)
         {
-            if (playerActualHealth < 25)
+            if (playerActualHealth < 30)
             {
                 Health = Health + 5;
             }
-            else if (playerActualHealth >= 25 && playerActualHealth < 30)
+            else if (playerActualHealth >= 30 && playerActualHealth < 35)
             {
-                Health = 30;
+                Health = 35;
             }
 
             return Health;

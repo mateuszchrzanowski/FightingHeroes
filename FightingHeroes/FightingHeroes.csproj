@@ -46,6 +46,7 @@
     <Compile Include="Character\Opponent\Manticore.cs" />
     <Compile Include="Character\Opponent\Troll.cs" />
     <Compile Include="Character\Opponent\Zombie.cs" />
+    <Compile Include="Character\Player\Hunter.cs" />
     <Compile Include="Game\Battle.cs" />
     <Compile Include="Character\Hero.cs" />
     <Compile Include="Game\Intro.cs" />

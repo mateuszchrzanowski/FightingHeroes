@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FightingHeroes
+namespace FightingHeroes.Character.Player
 {
     class Warrior : Hero
     {
@@ -52,6 +52,7 @@ namespace FightingHeroes
             return attackType;
         }
 
+        //METHODS
         public int SwordAttack()
         {
             return rnd.Next(5, SwordAttackMax);
@@ -88,16 +89,18 @@ namespace FightingHeroes
                         $"MSD: {SwordAttackMax} | MAD: {AxeAttackMax} | MMD: {MaceAttackMax}> \n");
         }
 
-        public override void RestoreHealth(int playerActualHealth)
+        public override int RestoreHealth(int playerActualHealth)
         {
             if (playerActualHealth < 30)
             {
-                Health += 5;
+                Health = Health + 5;
             }
-            else if(playerActualHealth > 30 && playerActualHealth < 35)
+            else if(playerActualHealth >= 30 && playerActualHealth < 35)
             {
                 Health = 35;
             }
+
+            return Health;
         }
     }
 }

@@ -184,11 +184,16 @@ namespace FightingHeroes
             //heroA - player
             //heroB - opponent
 
+            //int heroAHealth = heroA.RestoreHealth(heroA.Health);
             int heroABlock = heroA.Block();
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroABlock;
 
             heroA.RestoreHealth(heroA.Health);
+
+            Console.WriteLine($"\n{heroA.Name} uses Health Potion. He restored 5 health points. \n");
+
+            Console.WriteLine($"{heroA.Name} <H: {heroA.Health}> \n");
 
             if (dealedDamage > 0)
             {
@@ -198,10 +203,6 @@ namespace FightingHeroes
             {
                 dealedDamage = 0;
             }
-
-            Console.WriteLine($"\n{heroA.Name} uses Health Potion. He is able to restore 5 health points. \n");
-
-            Console.WriteLine($"{heroA.Name} <H: {heroA.Health}> \n");
 
             Console.WriteLine($"{heroB.Name} attacks {heroA.Name} ({heroBAttack})");
             Console.WriteLine($"{heroA.Name} blocks ({heroABlock})");

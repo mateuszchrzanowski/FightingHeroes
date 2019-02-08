@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FightingHeroes
+namespace FightingHeroes.Character.Opponent
 {
     class Troll : Hero
     {
@@ -31,7 +31,7 @@ namespace FightingHeroes
                         $"<H: {Health} | A: {Armor} | MA: {AttackMax}> \n\n");
         }
 
-        public override void RestoreHealth(int health)
+        public override int RestoreHealth(int health)
         {
             throw new NotImplementedException();
         }

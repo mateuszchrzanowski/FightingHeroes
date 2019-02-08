@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FightingHeroes.Character.Player;
 
 namespace FightingHeroes
 {
@@ -11,13 +12,10 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
-         * coś nie tak jest z tym RestoreHealth() - raz dodaje 5 hp, raz nie...
-         * 
-         * tymczasowo wizard ma 999 hp - pamiętać o tym
+         * Trzeba poprawnie zaimplementować Hunter.cs, na razie tylko utworzyłem klasę
          * 
          * 
-         * Health nie będzie się odnawiać po każdym przeciwniku. Zrobimy za to Life Potion.
-         * Będzie można odnowić Health (albo na maxa albo np +5. jescze nie wiem)
+         * Trzeba ograniczyć możliwość wykorzystania Life Potion. Np. 3 razy
          * 
          * Pozmieniać kolory tekstu
          * 
@@ -31,7 +29,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Working on implement RestoreHealth() method in battle process.
+         * Implemented RestoreHealth() method in battle process. Added Hunter.cs class.
          * 
          */
 
@@ -44,7 +42,7 @@ namespace FightingHeroes
                     {
                         Name = Intro.GetName(),
                         CharacterClass = "Wizard",
-                        Health = 999,//30,
+                        Health = 30,
                         Armor = 7,
                         FireballAttackMax = 13,
                         LightningAttackMax = 15,
