@@ -24,22 +24,19 @@ namespace FightingHeroes
             while (true)
             {
                 roundNumber++;
-                Console.WriteLine($"-----------Round: {roundNumber}-------------");
+                Console.WriteLine($"-------------Round: {roundNumber}-------------");
                 string getAction = GetAction();
                 if (getAction == "attack")
                 {
                     if (GetAttackResult(hero1, hero2) == "You Win!")
                     {
-                        //Console.WriteLine("You win!");
                         return "You Win!";
-                        //break;
                     }
                     else if (GetAttackResult(hero2, hero1) == "Game Over!")
                     {
-                        //Console.WriteLine("Game Over!");
                         return "Game Over!";
-                        //break;
                     }
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
@@ -47,10 +44,9 @@ namespace FightingHeroes
                 {
                     if(GetDefenseResult(hero1, hero2) == "Game Over!")
                     {
-                        //Console.WriteLine("Game Over!");
                         return "Game Over!";
-                        //break;
                     }
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
@@ -58,10 +54,9 @@ namespace FightingHeroes
                 {
                     if (GetHealthPotionResult(hero1, hero2) == "Game Over!")
                     {
-                        //Console.WriteLine("Game Over!");
                         return "Game Over!";
-                        //break;
                     }
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
@@ -181,10 +176,6 @@ namespace FightingHeroes
 
         public static string GetHealthPotionResult(Hero heroA, Hero heroB)
         {
-            //heroA - player
-            //heroB - opponent
-
-            //int heroAHealth = heroA.RestoreHealth(heroA.Health);
             int heroABlock = heroA.Block();
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroABlock;

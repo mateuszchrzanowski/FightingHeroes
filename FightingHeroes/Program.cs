@@ -12,7 +12,6 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
-         * Trzeba poprawnie zaimplementować Hunter.cs, na razie tylko utworzyłem klasę
          * 
          * 
          * Trzeba ograniczyć możliwość wykorzystania Life Potion. Np. 3 razy
@@ -21,7 +20,6 @@ namespace FightingHeroes
          * 
          * Zrobić tryb multiplayer
          * 
-         * zrobić więcej postaci
          * 
          * 
         */
@@ -29,7 +27,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Implemented RestoreHealth() method in battle process. Added Hunter.cs class.
+         * Implemented Hunter.cs class. Deleted useless comments.
          * 
          */
 
@@ -64,6 +62,20 @@ namespace FightingHeroes
                     };
                     warrior.GetStats();
                     Journey.StartJourney(warrior);
+                    break;
+                case "hunter":
+                    Hero hunter = new Hunter()
+                    {
+                        Name = Intro.GetName(),
+                        CharacterClass = "Hunter",
+                        Health = 30,
+                        Armor = 6,
+                        DaggerAttackMax = 9,
+                        BowAttackMax = 13,
+                        CrossbowAttackMax = 15,
+                    };
+                    hunter.GetStats();
+                    Journey.StartJourney(hunter);
                     break;
             }
 

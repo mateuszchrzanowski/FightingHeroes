@@ -82,11 +82,11 @@ namespace FightingHeroes.Character.Player
         {
             Console.WriteLine("\nYOUR CHARACTER:");
             base.GetStats();
-            Console.WriteLine($"Max Sword Damage: {DaggerAttackMax} \n" +
-                        $"Max Axe Damage: {BowAttackMax} \n" +
-                        $"Max Mace Damage: {CrossbowAttackMax} \n" +
+            Console.WriteLine($"Max Dagger Damage: {DaggerAttackMax} \n" +
+                        $"Max Bow Damage: {BowAttackMax} \n" +
+                        $"Max Crossbow Damage: {CrossbowAttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | " +
-                        $"MSD: {DaggerAttackMax} | MAD: {BowAttackMax} | MMD: {CrossbowAttackMax}> \n");
+                        $"MDD: {DaggerAttackMax} | MBD: {BowAttackMax} | MCD: {CrossbowAttackMax}> \n");
         }
 
         public override int RestoreHealth(int playerActualHealth)

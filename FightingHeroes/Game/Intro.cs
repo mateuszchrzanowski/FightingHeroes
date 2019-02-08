@@ -20,7 +20,8 @@ namespace FightingHeroes
             {
                 Console.WriteLine("Choose your character: \n" +
                 "[W] WARRIOR\n" +
-                "[D] WIZARD");
+                "[D] WIZARD \n" +
+                "[H] HUNTER");
 
                 userCharacterChoice = Console.ReadKey().Key.ToString();
                 Console.WriteLine();
@@ -32,6 +33,9 @@ namespace FightingHeroes
                         break;
                     case "W":
                         userCharacterChoiceResult = "warrior";
+                        break;
+                    case "H":
+                        userCharacterChoiceResult = "hunter";
                         break;
                     default:
                         userCharacterChoiceResult = "error";
