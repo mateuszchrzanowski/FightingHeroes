@@ -12,14 +12,13 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
-         * Coś jest nie tak z klasą Battle. Jeśli bohater ginie po wykonaniu ataku to gra się nie kończy.
-         * Jeśli ginie po wykonaniu obrony to jest ok.
          * 
          * Trzeba ograniczyć możliwość wykorzystania Life Potion. Np. 3 razy
          * 
-         * Pozmieniać kolory tekstu
          * 
          * Zrobić tryb multiplayer
+         * 
+         * Dodać FinalLocation z bosem. Tam koniec gry
          * 
          * 
          * 
@@ -28,7 +27,8 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Fixed BattleFight() method. Working on text color to improve code readability.
+         * Added GetDefeatedInfo() method in Journes.cs class. Changed text color of output information.
+         * Working on health potions limit.
          * 
          */
 

@@ -62,8 +62,10 @@ namespace FightingHeroes
             string userDirectionChoice;
             string userDirectionChoiceResult = "";
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nIn the mountains you are attacked by a troll! \n" +
                 "You have to defend yourself!");
+            Console.ResetColor();
             Console.WriteLine();
 
             Hero troll = new Troll()
@@ -80,17 +82,22 @@ namespace FightingHeroes
             if(IsHeroAlive(playerHero, troll))
             {
                 Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("You have defeated mighty troll from the mountains.\n" +
                     "Now you can continue your journey.\n" +
                     "You can go north to the ANCIENT CAVE or west to the SWAMPS near the old burial ground.\n");
+                Console.ResetColor();
             }
             else
             {
+                GetDefeatedInfo();
+                /*
                 Console.WriteLine("You have been defeated! \n" +
                     "[Press any key to exit game]");
                 Console.ReadKey();
 
                 Environment.Exit(0);
+                */
             }
             
 
@@ -129,8 +136,10 @@ namespace FightingHeroes
             string userDirectionChoice;
             string userDirectionChoiceResult = "";
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nIn the swamps you are attacked by an orc! \n" +
                 "You have to defend yourself!");
+            Console.ResetColor();
             Console.WriteLine();
 
             Hero orc = new Orc()
@@ -147,17 +156,23 @@ namespace FightingHeroes
             if (IsHeroAlive(playerHero, orc))
             {
                 Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("You have defeated wild orc from the swamps.\n" +
                     "Now you can continue your journey.\n" +
                     "You can go north to the OLD BURIAL GROUND or east into the MOUNTAINS.\n");
+                Console.ResetColor();
             }
             else
             {
+                GetDefeatedInfo();
+
+                /*
                 Console.WriteLine("You have been defeated! \n" +
                     "[Press any key to exit game]");
                 Console.ReadKey();
 
                 Environment.Exit(0);
+                */
             }
 
             do
@@ -195,8 +210,10 @@ namespace FightingHeroes
             string userDirectionChoice;
             string userDirectionChoiceResult = "";
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nInside the ancient cave you are attacked by a manticore! \n" +
                 "You have to defend yourself!");
+            Console.ResetColor();
             Console.WriteLine();
 
             Hero manticore = new Manticore()
@@ -213,17 +230,23 @@ namespace FightingHeroes
             if (IsHeroAlive(playerHero, manticore))
             {
                 Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("You have defeated great manticore from the ancient cave.\n" +
                     "Now you can continue your journey.\n" +
                     "You can go west to the OLD BURIAL GROUND or south into the MOUNTAINS.\n");
+                Console.ResetColor();
             }
             else
             {
+                GetDefeatedInfo();
+
+                /*
                 Console.WriteLine("You have been defeated! \n" +
                     "[Press any key to exit game]");
                 Console.ReadKey();
 
                 Environment.Exit(0);
+                */
             }
 
             do
@@ -261,8 +284,10 @@ namespace FightingHeroes
             string userDirectionChoice;
             string userDirectionChoiceResult = "";
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\nIn the old burial ground you are attacked by a Zombie! \n" +
                 "You have to defend yourself!");
+            Console.ResetColor();
             Console.WriteLine();
 
             Hero zombie = new Zombie()
@@ -279,17 +304,23 @@ namespace FightingHeroes
             if (IsHeroAlive(playerHero, zombie))
             {
                 Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("You have defeated rotten zombie from the old burial ground.\n" +
                     "Now you can continue your journey.\n" +
                     "You can go east to the ANCIET CAVE or south into the SWAMPS.\n");
+                Console.ResetColor();
             }
             else
             {
+                GetDefeatedInfo();
+
+                /*
                 Console.WriteLine("You have been defeated! \n" +
                     "[Press any key to exit game]");
                 Console.ReadKey();
 
                 Environment.Exit(0);
+                */
             }
 
             do
@@ -332,6 +363,15 @@ namespace FightingHeroes
             {
                 return true;
             }
+        }
+
+        public static void GetDefeatedInfo()
+        {
+            Console.WriteLine("\nYou have been defeated! \n" +
+                    "[Press any key to exit game]");
+            Console.ReadKey();
+
+            Environment.Exit(0);
         }
     }
 }

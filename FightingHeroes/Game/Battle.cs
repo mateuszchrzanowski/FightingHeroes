@@ -12,6 +12,7 @@ namespace FightingHeroes
         public static string StartFight(Hero hero1, Hero hero2)
         {
             int roundNumber = 0;
+            //int healthPotionCounter = 0;
 
             Console.WriteLine("Prepare to Fight! \n" +
                                 "[Press any key]");
@@ -24,7 +25,9 @@ namespace FightingHeroes
             while (true)
             {
                 roundNumber++;
+                Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"-------------Round: {roundNumber}-------------");
+                Console.ResetColor();
                 string getAction = GetAction();
                 if (getAction == "attack")
                 {
@@ -66,6 +69,7 @@ namespace FightingHeroes
         public static string GetAction()
         {
             string actionType = "";
+            int healthPotionAmount = 0;
 
             do
             {
@@ -87,9 +91,19 @@ namespace FightingHeroes
                         actionType = "defense";
                         break;
                     case '3':
-                        Console.WriteLine();
-                        actionType = "health";
-                        break;
+                        healthPotionAmount--;
+                        if(healthPotionAmount > 0)
+                        {
+                            Console.WriteLine();
+                            actionType = "health";
+                            break;
+                        }
+                        else
+                        {
+                            actionType = "error";
+                            Console.WriteLine("\nYou don't have any Health Potions! Please select other action.\n");
+                            break;
+                        }
                     default:
                         actionType = "error";
                         Console.WriteLine();
@@ -116,6 +130,8 @@ namespace FightingHeroes
             {
                 dealedDamage = 0;
             }
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
 
             Console.WriteLine($"\n{heroA.Name} attacks {heroB.Name} ({heroAAttack})");
             Console.WriteLine($"{heroB.Name} blocks ({heroBBlock})");
@@ -152,6 +168,8 @@ namespace FightingHeroes
                 dealedDamage = 0;
             }
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
             Console.WriteLine($"\n{heroA.Name} gets defensive position. He is able to use his max armor ({heroA.Armor})\n");
 
             Console.WriteLine($"{heroB.Name} attacks {heroA.Name} ({heroBAttack})");
@@ -181,6 +199,8 @@ namespace FightingHeroes
             int dealedDamage = heroBAttack - heroABlock;
 
             heroA.RestoreHealth(heroA.Health);
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
 
             Console.WriteLine($"\n{heroA.Name} uses Health Potion. He restored 5 health points. \n");
 

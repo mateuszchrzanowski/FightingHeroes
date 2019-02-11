@@ -25,10 +25,12 @@ namespace FightingHeroes.Character.Opponent
 
         public override void GetStats()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("YOUR OPPONENT:");
             base.GetStats();
             Console.WriteLine($"Max Attack: {AttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | MA: {AttackMax}> \n\n");
+            Console.ResetColor();
         }
 
         public override int RestoreHealth(int health)
