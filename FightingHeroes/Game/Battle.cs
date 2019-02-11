@@ -28,7 +28,7 @@ namespace FightingHeroes
                 string getAction = GetAction();
                 if (getAction == "attack")
                 {
-                    if (GetAttackResult(hero1, hero2) == "You Win!")
+                    if (GetAttackResult(hero1, hero2) == "Game Over!")
                     {
                         return "You Win!";
                     }
@@ -129,7 +129,7 @@ namespace FightingHeroes
 
                 Console.WriteLine();
                 Console.WriteLine($"{heroB.Name} died! {heroA.Name} is victorius!");
-                return "You Win!";
+                return "Game Over!";
             }
             else
             {

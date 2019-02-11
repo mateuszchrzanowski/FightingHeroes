@@ -80,6 +80,7 @@ namespace FightingHeroes.Character.Player
 
         public override void GetStats()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nYOUR CHARACTER:");
             base.GetStats();
             Console.WriteLine($"Max Dagger Damage: {DaggerAttackMax} \n" +
@@ -87,6 +88,7 @@ namespace FightingHeroes.Character.Player
                         $"Max Crossbow Damage: {CrossbowAttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | " +
                         $"MDD: {DaggerAttackMax} | MBD: {BowAttackMax} | MCD: {CrossbowAttackMax}> \n");
+            Console.ResetColor();
         }
 
         public override int RestoreHealth(int playerActualHealth)

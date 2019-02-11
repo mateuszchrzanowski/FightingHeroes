@@ -14,7 +14,9 @@ namespace FightingHeroes
             string userCharacterChoice;
             string userCharacterChoiceResult = "";
 
+            Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("### Fighting Heroes ###\n");
+            Console.ResetColor();
 
             do
             {

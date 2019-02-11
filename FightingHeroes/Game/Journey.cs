@@ -21,9 +21,11 @@ namespace FightingHeroes
             Console.WriteLine();
             Console.WriteLine();
 
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("You have been banished from your hometown. \n" +
                 "Now you are standing in the middle of deep dark forest. \n" +
                 "You can go east into to the MOUNTAINS or west to the SWAMPS near the old burial ground.\n");
+            Console.ResetColor();
 
             do
             {

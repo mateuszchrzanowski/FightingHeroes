@@ -12,7 +12,8 @@ namespace FightingHeroes
         //TODO:
         /* Commit
          * 
-         * 
+         * Coś jest nie tak z klasą Battle. Jeśli bohater ginie po wykonaniu ataku to gra się nie kończy.
+         * Jeśli ginie po wykonaniu obrony to jest ok.
          * 
          * Trzeba ograniczyć możliwość wykorzystania Life Potion. Np. 3 razy
          * 
@@ -27,7 +28,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Implemented Hunter.cs class. Deleted useless comments.
+         * Fixed BattleFight() method. Working on text color to improve code readability.
          * 
          */
 

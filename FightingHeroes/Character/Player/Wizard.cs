@@ -81,6 +81,7 @@ namespace FightingHeroes.Character.Player
 
         public override void GetStats()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nYOUR CHARACTER:");
             base.GetStats();
             Console.WriteLine($"Max Fireball Damage: {FireballAttackMax} \n" +
@@ -88,6 +89,7 @@ namespace FightingHeroes.Character.Player
                         $"Max Wild Fire Damage: {WildFireAttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | MFD: {FireballAttackMax} | " +
                         $"MLD: {LightningAttackMax} | MWFD: {WildFireAttackMax}> \n");
+            Console.ResetColor();
         }
 
         public override int RestoreHealth(int playerActualHealth)

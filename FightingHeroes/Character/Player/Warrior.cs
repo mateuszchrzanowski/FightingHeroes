@@ -80,6 +80,7 @@ namespace FightingHeroes.Character.Player
 
         public override void GetStats()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\nYOUR CHARACTER:");
             base.GetStats();
             Console.WriteLine($"Max Sword Damage: {SwordAttackMax} \n" +
@@ -87,6 +88,7 @@ namespace FightingHeroes.Character.Player
                         $"Max Mace Damage: {MaceAttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | " +
                         $"MSD: {SwordAttackMax} | MAD: {AxeAttackMax} | MMD: {MaceAttackMax}> \n");
+            Console.ResetColor();
         }
 
         public override int RestoreHealth(int playerActualHealth)
