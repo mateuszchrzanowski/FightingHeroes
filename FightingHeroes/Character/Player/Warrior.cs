@@ -91,8 +91,29 @@ namespace FightingHeroes.Character.Player
             Console.ResetColor();
         }
 
-        public override int RestoreHealth(int playerActualHealth)
+        public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
         {
+            if (healthPotionsAmount > 0)
+            {
+                if (playerActualHealth < 30)
+                {
+                    Health = Health + 5;
+                }
+                else if (playerActualHealth >= 30 && playerActualHealth < 35)
+                {
+                    Health = 35;
+                }
+            }
+            else
+            {
+                return 0;
+            }
+
+            healthPotionsAmount--;
+            Console.WriteLine("Potions amount: {0}", healthPotionsAmount);
+            return Health;
+            
+            /*
             if (playerActualHealth < 30)
             {
                 Health = Health + 5;
@@ -101,8 +122,10 @@ namespace FightingHeroes.Character.Player
             {
                 Health = 35;
             }
+            */
 
-            return Health;
+            //healthPotionsAmount--;
+            //return Health;
         }
     }
 }

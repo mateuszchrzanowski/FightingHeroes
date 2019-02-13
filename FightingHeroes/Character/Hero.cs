@@ -14,6 +14,7 @@ namespace FightingHeroes
         public int Health { get; set; }
         public int Armor { get; set; }
         public int AttackMax { get; set; }
+        public int HealthPotionsAmount { get; set; }
 
         public Random rnd = new Random();
 
@@ -28,6 +29,6 @@ namespace FightingHeroes
         public abstract int Attack();
         public abstract int Block();
         public abstract int Defense();
-        public abstract int RestoreHealth(int health);  
+        public abstract int RestoreHealth(int playerActualHealth, int healthPotionsAmount);  
     }
 }

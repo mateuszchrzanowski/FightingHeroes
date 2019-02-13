@@ -43,9 +43,9 @@ namespace FightingHeroes
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
-                else if(getAction == "defense")
+                else if (getAction == "defense")
                 {
-                    if(GetDefenseResult(hero1, hero2) == "Game Over!")
+                    if (GetDefenseResult(hero1, hero2) == "Game Over!")
                     {
                         return "Game Over!";
                     }
@@ -53,7 +53,7 @@ namespace FightingHeroes
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
                 }
-                else if(getAction == "health")
+                else if (getAction == "health")
                 {
                     if (GetHealthPotionResult(hero1, hero2) == "Game Over!")
                     {
@@ -69,7 +69,7 @@ namespace FightingHeroes
         public static string GetAction()
         {
             string actionType = "";
-            int healthPotionAmount = 0;
+            //int healthPotionAmount = 0;
 
             do
             {
@@ -91,6 +91,10 @@ namespace FightingHeroes
                         actionType = "defense";
                         break;
                     case '3':
+                        Console.WriteLine();
+                        actionType = "health";
+                        break;
+                    /*case '3':
                         healthPotionAmount--;
                         if(healthPotionAmount > 0)
                         {
@@ -103,7 +107,7 @@ namespace FightingHeroes
                             actionType = "error";
                             Console.WriteLine("\nYou don't have any Health Potions! Please select other action.\n");
                             break;
-                        }
+                        }*/
                     default:
                         actionType = "error";
                         Console.WriteLine();
@@ -122,7 +126,7 @@ namespace FightingHeroes
             int heroBBlock = heroB.Block();
             int dealedDamage = heroAAttack - heroBBlock;
 
-            if(dealedDamage > 0)
+            if (dealedDamage > 0)
             {
                 heroB.Health = heroB.Health - dealedDamage;
             }
@@ -197,8 +201,9 @@ namespace FightingHeroes
             int heroABlock = heroA.Block();
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroABlock;
+            int heroAHealthPotionsAmount = heroA.HealthPotionsAmount;
 
-            heroA.RestoreHealth(heroA.Health);
+            heroA.RestoreHealth(heroA.Health, heroAHealthPotionsAmount);
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 

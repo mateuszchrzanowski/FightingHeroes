@@ -33,7 +33,7 @@ namespace FightingHeroes.Character.Opponent
             Console.ResetColor();
         }
 
-        public override int RestoreHealth(int health)
+        public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
         {
             throw new NotImplementedException();
         }

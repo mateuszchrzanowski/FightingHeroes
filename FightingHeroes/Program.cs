@@ -27,8 +27,8 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Added GetDefeatedInfo() method in Journes.cs class. Changed text color of output information.
-         * Working on health potions limit.
+         * Working on RestoreHealth() method and health potions limit.
+         * 
          * 
          */
 
@@ -46,6 +46,7 @@ namespace FightingHeroes
                         FireballAttackMax = 13,
                         LightningAttackMax = 15,
                         WildFireAttackMax = 17,
+                        HealthPotionsAmount = 4,
                     };
                     wizard.GetStats();
                     Journey.StartJourney(wizard);
@@ -60,7 +61,8 @@ namespace FightingHeroes
                         SwordAttackMax = 10,
                         AxeAttackMax = 12,
                         MaceAttackMax = 15,
-                    };
+                        HealthPotionsAmount = 3,
+            };
                     warrior.GetStats();
                     Journey.StartJourney(warrior);
                     break;
@@ -74,6 +76,7 @@ namespace FightingHeroes
                         DaggerAttackMax = 9,
                         BowAttackMax = 13,
                         CrossbowAttackMax = 15,
+                        HealthPotionsAmount = 4,
                     };
                     hunter.GetStats();
                     Journey.StartJourney(hunter);
