@@ -112,22 +112,7 @@ namespace FightingHeroes.Character.Player
                 return 0;
             }
 
-            //healthPotionsAmount--;
             return Health;
-
-            /*
-            if (playerActualHealth < 30)
-            {
-                Health = Health + 5;
-            }
-            else if(playerActualHealth >= 30 && playerActualHealth < 35)
-            {
-                Health = 35;
-            }
-            */
-
-            //healthPotionsAmount--;
-            //return Health;
         }
     }
 }

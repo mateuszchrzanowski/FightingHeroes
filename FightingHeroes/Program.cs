@@ -13,8 +13,7 @@ namespace FightingHeroes
         /* Commit
          * 
          * 
-         * Trzeba ograniczyć możliwość wykorzystania Life Potion. Np. 3 razy
-         * 
+         * Dodać dźwięki
          * 
          * Zrobić tryb multiplayer
          * 
@@ -27,7 +26,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Implemented RestoreHealth() method and limited health potions amount to 3. Edited output text colors.
+         * "Defensife position" action changed to "Defensive position". Deleted useless comments. Deleted Opponent.cs class. Added .wav file (test).
          * 
          * 
          */

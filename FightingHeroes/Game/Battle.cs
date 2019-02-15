@@ -12,7 +12,6 @@ namespace FightingHeroes
         public static string StartFight(Hero hero1, Hero hero2)
         {
             int roundNumber = 0;
-            //int healthPotionCounter = 0;
 
             Console.WriteLine("Prepare to Fight! \n" +
                                 "[Press any key]");
@@ -69,13 +68,12 @@ namespace FightingHeroes
         public static string GetAction(Hero hero)
         {
             string actionType = "";
-            //int healthPotionAmount = 0;
 
             do
             {
                 Console.WriteLine("Select your action: \n" +
                 "[1] Attack \n" +
-                "[2] Defensife position \n" +
+                "[2] Defensive position \n" +
                 "[3] Health Potion ({0})", hero.HealthPotionsAmount);
 
                 ConsoleKeyInfo action = Console.ReadKey();
@@ -90,10 +88,6 @@ namespace FightingHeroes
                         Console.WriteLine();
                         actionType = "defense";
                         break;
-                    /*case '3':
-                        Console.WriteLine();
-                        actionType = "health";
-                        break;*/
                     case '3':
                         if(hero.HealthPotionsAmount > 0)
                         {
@@ -205,11 +199,9 @@ namespace FightingHeroes
             int heroABlock = heroA.Block();
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroABlock;
-            //int heroAHealthPotionsAmount = heroA.HealthPotionsAmount;
 
             heroA.RestoreHealth(heroA.Health, heroA.HealthPotionsAmount);
             heroA.HealthPotionsAmount--;
-            //Console.WriteLine("Potions amount: {0}", heroA.HealthPotionsAmount);
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 

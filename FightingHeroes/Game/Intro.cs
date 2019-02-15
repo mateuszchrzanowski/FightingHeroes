@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 namespace FightingHeroes
 {
@@ -13,6 +14,9 @@ namespace FightingHeroes
         {
             string userCharacterChoice;
             string userCharacterChoiceResult = "";
+            var startMusic = new SoundPlayer();
+            startMusic.SoundLocation = @"D:\MCh\kody\CSharp\FightingHeroes\FightingHeroes\Sound\GOT2.wav";
+            startMusic.Play();
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("### Fighting Heroes ###\n");

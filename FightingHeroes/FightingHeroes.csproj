@@ -51,7 +51,6 @@
     <Compile Include="Character\Hero.cs" />
     <Compile Include="Game\Intro.cs" />
     <Compile Include="Game\Journey.cs" />
-    <Compile Include="Opponent.cs" />
     <Compile Include="Character\Opponent\Orc.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -61,6 +60,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Sound\GOT.mp3" />
+    <Content Include="Sound\GOT2.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

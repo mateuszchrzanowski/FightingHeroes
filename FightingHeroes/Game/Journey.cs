@@ -79,8 +79,6 @@ namespace FightingHeroes
                 AttackMax = 12,
             };
 
-            //Battle.StartFight(playerHero, troll);
-
             if(IsHeroAlive(playerHero, troll))
             {
                 Console.WriteLine();
@@ -93,13 +91,6 @@ namespace FightingHeroes
             else
             {
                 GetDefeatedInfo();
-                /*
-                Console.WriteLine("You have been defeated! \n" +
-                    "[Press any key to exit game]");
-                Console.ReadKey();
-
-                Environment.Exit(0);
-                */
             }
             
 
@@ -155,8 +146,6 @@ namespace FightingHeroes
                 AttackMax = 11,
             };
 
-            //Battle.StartFight(playerHero, orc);
-
             if (IsHeroAlive(playerHero, orc))
             {
                 Console.WriteLine();
@@ -169,14 +158,6 @@ namespace FightingHeroes
             else
             {
                 GetDefeatedInfo();
-
-                /*
-                Console.WriteLine("You have been defeated! \n" +
-                    "[Press any key to exit game]");
-                Console.ReadKey();
-
-                Environment.Exit(0);
-                */
             }
 
             do
@@ -231,8 +212,6 @@ namespace FightingHeroes
                 AttackMax = 12,
             };
 
-            //Battle.StartFight(playerHero, manticore);
-
             if (IsHeroAlive(playerHero, manticore))
             {
                 Console.WriteLine();
@@ -245,14 +224,6 @@ namespace FightingHeroes
             else
             {
                 GetDefeatedInfo();
-
-                /*
-                Console.WriteLine("You have been defeated! \n" +
-                    "[Press any key to exit game]");
-                Console.ReadKey();
-
-                Environment.Exit(0);
-                */
             }
 
             do
@@ -307,8 +278,6 @@ namespace FightingHeroes
                 AttackMax = 13,
             };
 
-            //Battle.StartFight(playerHero, zombie);
-
             if (IsHeroAlive(playerHero, zombie))
             {
                 Console.WriteLine();
@@ -321,14 +290,6 @@ namespace FightingHeroes
             else
             {
                 GetDefeatedInfo();
-
-                /*
-                Console.WriteLine("You have been defeated! \n" +
-                    "[Press any key to exit game]");
-                Console.ReadKey();
-
-                Environment.Exit(0);
-                */
             }
 
             do
