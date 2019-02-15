@@ -41,7 +41,9 @@ namespace FightingHeroes
                         break;
                     default:
                         userCharacterChoiceResult = "error";
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again. \n");
+                        Console.ResetColor();
                         break;
                 }
             }

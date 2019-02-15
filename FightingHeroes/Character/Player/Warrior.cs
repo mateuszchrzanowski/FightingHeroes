@@ -109,8 +109,8 @@ namespace FightingHeroes.Character.Player
                 return 0;
             }
 
-            healthPotionsAmount--;
-            Console.WriteLine("Potions amount: {0}", healthPotionsAmount);
+            //healthPotionsAmount--;
+            //Console.WriteLine("Potions amount: {0}", healthPotionsAmount);
             return Health;
             
             /*

@@ -44,7 +44,9 @@ namespace FightingHeroes.Character.Player
                     default:
                         attackType = 0;
                         Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again.");
+                        Console.ResetColor();
                         break;
                 }
             }
@@ -110,7 +112,7 @@ namespace FightingHeroes.Character.Player
                 return 0;
             }
 
-            healthPotionsAmount--;
+            //healthPotionsAmount--;
             return Health;
 
             /*

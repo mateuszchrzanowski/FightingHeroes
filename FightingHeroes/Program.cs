@@ -27,7 +27,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Working on RestoreHealth() method and health potions limit.
+         * Implemented RestoreHealth() method and limited health potions amount to 3. Edited output text colors.
          * 
          * 
          */

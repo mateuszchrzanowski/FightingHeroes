@@ -109,7 +109,7 @@ namespace FightingHeroes.Character.Player
                 return 0;
             }
 
-            healthPotionsAmount--;
+            //healthPotionsAmount--;
             return Health;
 
             /*

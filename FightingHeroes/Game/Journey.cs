@@ -48,7 +48,9 @@ namespace FightingHeroes
                         break;
                     default:
                         userDirectionChoiceResult = "error";
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again. \n");
+                        Console.ResetColor();
                         break;
                 }
             }
@@ -122,7 +124,9 @@ namespace FightingHeroes
                         break;
                     default:
                         userDirectionChoiceResult = "error";
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again. \n");
+                        Console.ResetColor();
                         break;
                 }
             }
@@ -196,7 +200,9 @@ namespace FightingHeroes
                         break;
                     default:
                         userDirectionChoiceResult = "error";
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again. \n");
+                        Console.ResetColor();
                         break;
                 }
             }
@@ -270,7 +276,9 @@ namespace FightingHeroes
                         break;
                     default:
                         userDirectionChoiceResult = "error";
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again. \n");
+                        Console.ResetColor();
                         break;
                 }
             }
@@ -344,7 +352,9 @@ namespace FightingHeroes
                         break;
                     default:
                         userDirectionChoiceResult = "error";
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again. \n");
+                        Console.ResetColor();
                         break;
                 }
             }

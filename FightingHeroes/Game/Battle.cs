@@ -28,7 +28,7 @@ namespace FightingHeroes
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.WriteLine($"-------------Round: {roundNumber}-------------");
                 Console.ResetColor();
-                string getAction = GetAction();
+                string getAction = GetAction(hero1);
                 if (getAction == "attack")
                 {
                     if (GetAttackResult(hero1, hero2) == "Game Over!")
@@ -66,7 +66,7 @@ namespace FightingHeroes
             }
         }
 
-        public static string GetAction()
+        public static string GetAction(Hero hero)
         {
             string actionType = "";
             //int healthPotionAmount = 0;
@@ -76,7 +76,7 @@ namespace FightingHeroes
                 Console.WriteLine("Select your action: \n" +
                 "[1] Attack \n" +
                 "[2] Defensife position \n" +
-                "[3] Health Potion");
+                "[3] Health Potion ({0})", hero.HealthPotionsAmount);
 
                 ConsoleKeyInfo action = Console.ReadKey();
 
@@ -90,13 +90,12 @@ namespace FightingHeroes
                         Console.WriteLine();
                         actionType = "defense";
                         break;
-                    case '3':
+                    /*case '3':
                         Console.WriteLine();
                         actionType = "health";
-                        break;
-                    /*case '3':
-                        healthPotionAmount--;
-                        if(healthPotionAmount > 0)
+                        break;*/
+                    case '3':
+                        if(hero.HealthPotionsAmount > 0)
                         {
                             Console.WriteLine();
                             actionType = "health";
@@ -105,13 +104,18 @@ namespace FightingHeroes
                         else
                         {
                             actionType = "error";
+                            Console.WriteLine();
+                            Console.ForegroundColor = ConsoleColor.Magenta;
                             Console.WriteLine("\nYou don't have any Health Potions! Please select other action.\n");
+                            Console.ResetColor();
                             break;
-                        }*/
+                        }
                     default:
                         actionType = "error";
                         Console.WriteLine();
+                        Console.ForegroundColor = ConsoleColor.Magenta;
                         Console.WriteLine("\nWrong input. Please try again.\n");
+                        Console.ResetColor();
                         break;
                 }
             }
@@ -201,9 +205,11 @@ namespace FightingHeroes
             int heroABlock = heroA.Block();
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroABlock;
-            int heroAHealthPotionsAmount = heroA.HealthPotionsAmount;
+            //int heroAHealthPotionsAmount = heroA.HealthPotionsAmount;
 
-            heroA.RestoreHealth(heroA.Health, heroAHealthPotionsAmount);
+            heroA.RestoreHealth(heroA.Health, heroA.HealthPotionsAmount);
+            heroA.HealthPotionsAmount--;
+            //Console.WriteLine("Potions amount: {0}", heroA.HealthPotionsAmount);
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 
