@@ -9,27 +9,6 @@ namespace FightingHeroes
 {
     class Program
     {
-        //TODO:
-        /* Commit
-         * 
-         * 
-         * 
-         * Zrobić tryb multiplayer
-         * 
-         * 
-         * 
-         * 
-        */
-
-        //DONE:
-        /*
-         * 
-         * Changed orc name. Added final location - haunted village with final boss - deamon from the ancient world.
-         * Updated Journey.cs class and sounds.
-         * 
-         * 
-         */
-
         static void Main(string[] args)
         {
             switch (Intro.StartGame())
