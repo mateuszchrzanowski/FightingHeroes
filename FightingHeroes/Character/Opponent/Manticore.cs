@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FightingHeroes.Sound;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,8 @@ namespace FightingHeroes.Character.Opponent
             Console.WriteLine($"Max Attack: {AttackMax} \n" +
                         $"<H: {Health} | A: {Armor} | MA: {AttackMax}> \n\n");
             Console.ResetColor();
+
+            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\manticore.wav");
         }
 
         public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)

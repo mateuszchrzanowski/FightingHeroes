@@ -73,13 +73,17 @@
     <Content Include="Sound\SoundFiles\intro.wav" />
     <Content Include="Sound\SoundFiles\lightning.wav" />
     <Content Include="Sound\SoundFiles\mace.wav" />
+    <Content Include="Sound\SoundFiles\manticore.wav" />
+    <Content Include="Sound\SoundFiles\orc.wav" />
     <Content Include="Sound\SoundFiles\potion.wav" />
     <Content Include="Sound\SoundFiles\sword.wav" />
+    <Content Include="Sound\SoundFiles\troll.wav" />
     <Content Include="Sound\SoundFiles\warrior-defense.wav" />
     <Content Include="Sound\SoundFiles\warrior.wav" />
     <Content Include="Sound\SoundFiles\wild-fire.wav" />
     <Content Include="Sound\SoundFiles\wizard-defense.wav" />
     <Content Include="Sound\SoundFiles\wizard.wav" />
+    <Content Include="Sound\SoundFiles\zombie.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

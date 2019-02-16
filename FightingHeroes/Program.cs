@@ -13,14 +13,6 @@ namespace FightingHeroes
         /* Commit
          * 
          * 
-         * Dodać dźwięki:
-         * -baldur intro
-         * -life potion (diablo)
-         * -class selection
-         * -attack type
-         * -defensive position
-         * -victory
-         * -death
          * 
          * Zrobić tryb multiplayer
          * 
@@ -33,7 +25,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Added sound effects.
+         * Added sound effects for opponents.
          * 
          * 
          */
