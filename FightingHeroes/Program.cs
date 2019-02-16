@@ -16,7 +16,6 @@ namespace FightingHeroes
          * 
          * Zrobić tryb multiplayer
          * 
-         * Dodać FinalLocation z bosem. Tam koniec gry
          * 
          * 
          * 
@@ -25,7 +24,8 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * Added sound effects for opponents.
+         * Changed orc name. Added final location - haunted village with final boss - deamon from the ancient world.
+         * Updated Journey.cs class and sounds.
          * 
          * 
          */
@@ -60,7 +60,7 @@ namespace FightingHeroes
                         AxeAttackMax = 12,
                         MaceAttackMax = 15,
                         HealthPotionsAmount = 3,
-            };
+                    };
                     warrior.GetStats();
                     Journey.StartJourney(warrior);
                     break;

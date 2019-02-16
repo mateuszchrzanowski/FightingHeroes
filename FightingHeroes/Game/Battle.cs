@@ -37,7 +37,7 @@ namespace FightingHeroes
                     }
                     else if (GetAttackResult(hero2, hero1) == "Game Over!")
                     {
-                        SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\death.wav");
+                        //SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\player-death.wav");
                         return "Game Over!";
                     }
 

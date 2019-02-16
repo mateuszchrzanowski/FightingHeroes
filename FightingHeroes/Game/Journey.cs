@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FightingHeroes.Character.Opponent;
+using FightingHeroes.Sound;
 
 namespace FightingHeroes
 {
@@ -138,7 +139,7 @@ namespace FightingHeroes
 
             Hero orc = new Orc()
             {
-                Name = "Uruk-hai",
+                Name = "Mekog",
                 CharacterClass = "Orc",
                 Health = 30,
                 Armor = 7,
@@ -283,7 +284,7 @@ namespace FightingHeroes
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("You have defeated rotten zombie from the old burial ground.\n" +
                     "Now you can continue your journey.\n" +
-                    "You can go east to the ANCIET CAVE or south into the SWAMPS.\n");
+                    "You can go east to the ANCIET CAVE, south into the SWAMPS or north to the HAUNTED VILLAGE.\n");
                 Console.ResetColor();
             }
             else
@@ -295,7 +296,8 @@ namespace FightingHeroes
             {
                 Console.WriteLine("Choose direction of your journey: \n" +
                 "[C] Ancient Cave \n" +
-                "[S] Swamps");
+                "[S] Swamps \n" +
+                "[V] Haunted Village");
 
                 userDirectionChoice = Console.ReadKey().Key.ToString();
                 Console.WriteLine();
@@ -310,6 +312,10 @@ namespace FightingHeroes
                         userDirectionChoiceResult = "Swamps";
                         GetSwampsScenario(playerHero);
                         break;
+                    case "V":
+                        userDirectionChoiceResult = "Village";
+                        GetVillageScenario(playerHero);
+                        break;
                     default:
                         userDirectionChoiceResult = "error";
                         Console.ForegroundColor = ConsoleColor.Magenta;
@@ -323,10 +329,51 @@ namespace FightingHeroes
             return userDirectionChoiceResult;
         }
 
+        public static void GetVillageScenario(Hero playerHero)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\nIn the haunted village you are attacked by the deamon from the ancient world! \n" +
+                "You have to defend yourself!");
+            Console.ResetColor();
+            Console.WriteLine();
+
+            Hero deamon = new Deamon()
+            {
+                Name = "Gorlab",
+                CharacterClass = "Deamon",
+                Health = 55,
+                Armor = 4,
+                AttackMax = 15,
+            };
+
+            if (IsHeroAlive(playerHero, deamon))
+            {
+                SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\deamon-death.wav");
+
+                Console.WriteLine();
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("In the haunted village you have defeated deamon from the ancient world.\n" +
+                    "Without their master, the rest of the monsters fled this area.\n" +
+                    "You were able to eradicate the evil from this place.\n");
+                Console.ResetColor();
+                Console.WriteLine();
+
+                Console.WriteLine("[Press any key to exit game]");
+                Console.ReadKey();
+
+                Environment.Exit(0);
+            }
+            else
+            {
+                GetDefeatedInfo();
+            }
+        }
+
         public static bool IsHeroAlive(Hero playerHero, Hero opponent)
         {
             if (Battle.StartFight(playerHero, opponent) == "Game Over!")
             {
+                SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\player-death.wav");
                 return false;
             }
             else

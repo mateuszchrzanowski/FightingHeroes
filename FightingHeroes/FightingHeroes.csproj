@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Character\Opponent\Deamon.cs" />
     <Compile Include="Character\Opponent\Manticore.cs" />
     <Compile Include="Character\Opponent\Troll.cs" />
     <Compile Include="Character\Opponent\Zombie.cs" />
@@ -66,7 +67,8 @@
     <Content Include="Sound\SoundFiles\bow.wav" />
     <Content Include="Sound\SoundFiles\crossbow.wav" />
     <Content Include="Sound\SoundFiles\dagger.wav" />
-    <Content Include="Sound\SoundFiles\death.wav" />
+    <Content Include="Sound\SoundFiles\deamon-death.wav" />
+    <Content Include="Sound\SoundFiles\deamon.wav" />
     <Content Include="Sound\SoundFiles\fireball.wav" />
     <Content Include="Sound\SoundFiles\hunter-defense.wav" />
     <Content Include="Sound\SoundFiles\hunter.wav" />
@@ -75,6 +77,7 @@
     <Content Include="Sound\SoundFiles\mace.wav" />
     <Content Include="Sound\SoundFiles\manticore.wav" />
     <Content Include="Sound\SoundFiles\orc.wav" />
+    <Content Include="Sound\SoundFiles\player-death.wav" />
     <Content Include="Sound\SoundFiles\potion.wav" />
     <Content Include="Sound\SoundFiles\sword.wav" />
     <Content Include="Sound\SoundFiles\troll.wav" />
