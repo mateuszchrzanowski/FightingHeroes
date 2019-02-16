@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FightingHeroes.Sound;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,16 +59,19 @@ namespace FightingHeroes.Character.Player
         //METHODS
         public int FireballAttack()
         {
+            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\fireball.wav");
             return rnd.Next(4, FireballAttackMax);
         }
 
         public int LightningAttack()
         {
+            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\lightning.wav");
             return rnd.Next(2, LightningAttackMax);
         }
 
         public int WildFireAttack()
         {
+            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\wild-fire.wav");
             return rnd.Next(1, WildFireAttackMax);
         }
 
@@ -78,6 +82,7 @@ namespace FightingHeroes.Character.Player
 
         public override int Defense()
         {
+            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\wizard-defense.wav");
             return Armor;
         }
 

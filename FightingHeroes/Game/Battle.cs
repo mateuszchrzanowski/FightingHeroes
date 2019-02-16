@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FightingHeroes.Sound;
 
 namespace FightingHeroes
 {
@@ -36,6 +37,7 @@ namespace FightingHeroes
                     }
                     else if (GetAttackResult(hero2, hero1) == "Game Over!")
                     {
+                        SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\death.wav");
                         return "Game Over!";
                     }
 
@@ -92,6 +94,7 @@ namespace FightingHeroes
                         if(hero.HealthPotionsAmount > 0)
                         {
                             Console.WriteLine();
+                            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\potion.wav");
                             actionType = "health";
                             break;
                         }

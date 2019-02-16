@@ -56,13 +56,30 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Character\Player\Warrior.cs" />
     <Compile Include="Character\Player\Wizard.cs" />
+    <Compile Include="Sound\SoundEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sound\GOT.mp3" />
-    <Content Include="Sound\GOT2.wav" />
+    <Content Include="Sound\SoundFiles\axe.wav" />
+    <Content Include="Sound\SoundFiles\bow.wav" />
+    <Content Include="Sound\SoundFiles\crossbow.wav" />
+    <Content Include="Sound\SoundFiles\dagger.wav" />
+    <Content Include="Sound\SoundFiles\death.wav" />
+    <Content Include="Sound\SoundFiles\fireball.wav" />
+    <Content Include="Sound\SoundFiles\hunter-defense.wav" />
+    <Content Include="Sound\SoundFiles\hunter.wav" />
+    <Content Include="Sound\SoundFiles\intro.wav" />
+    <Content Include="Sound\SoundFiles\lightning.wav" />
+    <Content Include="Sound\SoundFiles\mace.wav" />
+    <Content Include="Sound\SoundFiles\potion.wav" />
+    <Content Include="Sound\SoundFiles\sword.wav" />
+    <Content Include="Sound\SoundFiles\warrior-defense.wav" />
+    <Content Include="Sound\SoundFiles\warrior.wav" />
+    <Content Include="Sound\SoundFiles\wild-fire.wav" />
+    <Content Include="Sound\SoundFiles\wizard-defense.wav" />
+    <Content Include="Sound\SoundFiles\wizard.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

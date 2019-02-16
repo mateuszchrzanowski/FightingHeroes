@@ -13,7 +13,14 @@ namespace FightingHeroes
         /* Commit
          * 
          * 
-         * Dodać dźwięki
+         * Dodać dźwięki:
+         * -baldur intro
+         * -life potion (diablo)
+         * -class selection
+         * -attack type
+         * -defensive position
+         * -victory
+         * -death
          * 
          * Zrobić tryb multiplayer
          * 
@@ -26,7 +33,7 @@ namespace FightingHeroes
         //DONE:
         /*
          * 
-         * "Defensife position" action changed to "Defensive position". Deleted useless comments. Deleted Opponent.cs class. Added .wav file (test).
+         * Added sound effects.
          * 
          * 
          */
