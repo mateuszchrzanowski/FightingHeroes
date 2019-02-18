@@ -15,13 +15,11 @@ namespace FightingHeroes
         {
             string userCharacterChoice;
             string userCharacterChoiceResult = "";
-            /*var startMusic = new SoundPlayer();
-            startMusic.SoundLocation = @"D:\MCh\kody\CSharp\FightingHeroes\FightingHeroes\Sound\GOT2.wav";
-            startMusic.Play();*/
+
             SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\intro.wav");
 
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("### Fighting Heroes ###\n");
+            Console.WriteLine("### Fighting Heroes v.1.0 ###\n");
             Console.ResetColor();
 
             do

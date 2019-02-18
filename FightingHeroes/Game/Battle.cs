@@ -37,12 +37,15 @@ namespace FightingHeroes
                     }
                     else if (GetAttackResult(hero2, hero1) == "Game Over!")
                     {
-                        //SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\player-death.wav");
                         return "Game Over!";
                     }
 
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
+
+                    Console.ResetColor();
                 }
                 else if (getAction == "defense")
                 {
@@ -51,8 +54,12 @@ namespace FightingHeroes
                         return "Game Over!";
                     }
 
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
+
+                    Console.ResetColor();
                 }
                 else if (getAction == "health")
                 {
@@ -61,8 +68,12 @@ namespace FightingHeroes
                         return "Game Over!";
                     }
 
+                    Console.ForegroundColor = ConsoleColor.DarkRed;
+
                     Console.WriteLine($"\n{hero1.Name} <H: {hero1.Health}>");
                     Console.WriteLine($"{hero2.Name} <H: {hero2.Health}>\n");
+
+                    Console.ResetColor();
                 }
             }
         }
@@ -144,9 +155,13 @@ namespace FightingHeroes
 
             if (heroB.Health <= 0)
             {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+
                 Console.WriteLine();
                 Console.WriteLine($"{heroA.Name} <H: {heroA.Health}>");
                 Console.WriteLine($"{heroB.Name} <H: {heroB.Health}>");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
 
                 Console.WriteLine();
                 Console.WriteLine($"{heroB.Name} died! {heroA.Name} is victorius!");
@@ -183,9 +198,13 @@ namespace FightingHeroes
 
             if (heroA.Health <= 0)
             {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+
                 Console.WriteLine();
                 Console.WriteLine($"{heroA.Name} <H: {heroA.Health}>");
                 Console.WriteLine($"{heroB.Name} <H: {heroB.Health}>");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
 
                 Console.WriteLine();
                 Console.WriteLine($"{heroA.Name} died! {heroB.Name} is victorius!");
@@ -210,7 +229,12 @@ namespace FightingHeroes
 
             Console.WriteLine($"\n{heroA.Name} uses Health Potion. He restored 5 health points. \n");
 
+
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+
             Console.WriteLine($"{heroA.Name} <H: {heroA.Health}> \n");
+
+            Console.ResetColor();
 
             if (dealedDamage > 0)
             {
@@ -221,15 +245,21 @@ namespace FightingHeroes
                 dealedDamage = 0;
             }
 
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
             Console.WriteLine($"{heroB.Name} attacks {heroA.Name} ({heroBAttack})");
             Console.WriteLine($"{heroA.Name} blocks ({heroABlock})");
             Console.WriteLine($"{heroB.Name} deals damage ({dealedDamage})");
 
             if (heroA.Health <= 0)
             {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+
                 Console.WriteLine();
                 Console.WriteLine($"{heroA.Name} <H: {heroA.Health}>");
                 Console.WriteLine($"{heroB.Name} <H: {heroB.Health}>");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
 
                 Console.WriteLine();
                 Console.WriteLine($"{heroA.Name} died! {heroB.Name} is victorius!");

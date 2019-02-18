@@ -384,8 +384,11 @@ namespace FightingHeroes
 
         public static void GetDefeatedInfo()
         {
-            Console.WriteLine("\nYou have been defeated! \n" +
-                    "[Press any key to exit game]");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("\nYou have been defeated!");
+            Console.ResetColor();
+
+            Console.WriteLine("[Press any key to exit game]");
             Console.ReadKey();
 
             Environment.Exit(0);
