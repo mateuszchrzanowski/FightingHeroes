@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Media;
 using FightingHeroes.Sound;
+using System.IO;
 
 namespace FightingHeroes
 {
@@ -16,7 +17,7 @@ namespace FightingHeroes
             string userCharacterChoice;
             string userCharacterChoiceResult = "";
 
-            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\intro.wav");
+            SoundEffect.GetSound(Resource.intro);
 
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("### Fighting Heroes v.1.0 ###\n");
@@ -36,15 +37,15 @@ namespace FightingHeroes
                 {
                     case "D":
                         userCharacterChoiceResult = "wizard";
-                        SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\wizard.wav");
+                        SoundEffect.GetSound(Resource.wizard);
                         break;
                     case "W":
                         userCharacterChoiceResult = "warrior";
-                        SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\warrior.wav");
+                        SoundEffect.GetSound(Resource.warrior);
                         break;
                     case "H":
                         userCharacterChoiceResult = "hunter";
-                        SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\hunter.wav");
+                        SoundEffect.GetSound(Resource.hunter);
                         break;
                     default:
                         userCharacterChoiceResult = "error";

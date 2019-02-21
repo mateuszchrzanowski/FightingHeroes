@@ -105,7 +105,7 @@ namespace FightingHeroes
                         if(hero.HealthPotionsAmount > 0)
                         {
                             Console.WriteLine();
-                            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\potion.wav");
+                            SoundEffect.GetSound(Resource.potion);
                             actionType = "health";
                             break;
                         }

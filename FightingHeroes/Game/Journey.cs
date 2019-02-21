@@ -348,7 +348,7 @@ namespace FightingHeroes
 
             if (IsHeroAlive(playerHero, deamon))
             {
-                SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\deamon-death.wav");
+                SoundEffect.GetSound(Resource.deamon_death);
 
                 Console.WriteLine();
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -373,7 +373,7 @@ namespace FightingHeroes
         {
             if (Battle.StartFight(playerHero, opponent) == "Game Over!")
             {
-                SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\player-death.wav");
+                SoundEffect.GetSound(Resource.player_death);
                 return false;
             }
             else

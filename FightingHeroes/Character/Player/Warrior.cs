@@ -56,19 +56,19 @@ namespace FightingHeroes.Character.Player
         //METHODS
         public int SwordAttack()
         {
-            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\sword.wav");
+            SoundEffect.GetSound(Resource.sword);
             return rnd.Next(5, SwordAttackMax);
         }
 
         public int AxeAttack()
         {
-            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\axe.wav");
+            SoundEffect.GetSound(Resource.axe);
             return rnd.Next(3, AxeAttackMax);
         }
 
         public int MaceAttack()
         {
-            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\mace.wav");
+            SoundEffect.GetSound(Resource.mace);
             return rnd.Next(1, MaceAttackMax);
         }
 
@@ -79,7 +79,7 @@ namespace FightingHeroes.Character.Player
 
         public override int Defense()
         {
-            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\warrior-defense.wav");
+            SoundEffect.GetSound(Resource.warrior_defense);
             return Armor;
         }
 

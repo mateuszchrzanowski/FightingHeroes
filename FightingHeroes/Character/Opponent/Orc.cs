@@ -33,7 +33,7 @@ namespace FightingHeroes.Character.Opponent
                         $"<H: {Health} | A: {Armor} | MA: {AttackMax}> \n\n");
             Console.ResetColor();
 
-            SoundEffect.GetSound(@"C:\Users\mateu\OneDrive\Kodowanie\Moje projekty\FightingHeroes\FightingHeroes\Sound\SoundFiles\orc.wav");
+            SoundEffect.GetSound(Resource.orc);
         }
 
         public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)

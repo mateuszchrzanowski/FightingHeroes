@@ -57,36 +57,93 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Character\Player\Warrior.cs" />
     <Compile Include="Character\Player\Wizard.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Sound\SoundEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sound\SoundFiles\axe.wav" />
-    <Content Include="Sound\SoundFiles\bow.wav" />
-    <Content Include="Sound\SoundFiles\crossbow.wav" />
-    <Content Include="Sound\SoundFiles\dagger.wav" />
-    <Content Include="Sound\SoundFiles\deamon-death.wav" />
-    <Content Include="Sound\SoundFiles\deamon.wav" />
-    <Content Include="Sound\SoundFiles\fireball.wav" />
-    <Content Include="Sound\SoundFiles\hunter-defense.wav" />
-    <Content Include="Sound\SoundFiles\hunter.wav" />
-    <Content Include="Sound\SoundFiles\intro.wav" />
-    <Content Include="Sound\SoundFiles\lightning.wav" />
-    <Content Include="Sound\SoundFiles\mace.wav" />
-    <Content Include="Sound\SoundFiles\manticore.wav" />
-    <Content Include="Sound\SoundFiles\orc.wav" />
-    <Content Include="Sound\SoundFiles\player-death.wav" />
-    <Content Include="Sound\SoundFiles\potion.wav" />
-    <Content Include="Sound\SoundFiles\sword.wav" />
-    <Content Include="Sound\SoundFiles\troll.wav" />
-    <Content Include="Sound\SoundFiles\warrior-defense.wav" />
-    <Content Include="Sound\SoundFiles\warrior.wav" />
-    <Content Include="Sound\SoundFiles\wild-fire.wav" />
-    <Content Include="Sound\SoundFiles\wizard-defense.wav" />
-    <Content Include="Sound\SoundFiles\wizard.wav" />
-    <Content Include="Sound\SoundFiles\zombie.wav" />
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\axe.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bow.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\crossbow.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dagger.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deamon.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deamon-death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fireball.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hunter.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hunter-defense.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\intro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lightning.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mace.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manticore.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orc.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player-death.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potion.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sword.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\troll.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior-defense.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wild-fire.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard-defense.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombie.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

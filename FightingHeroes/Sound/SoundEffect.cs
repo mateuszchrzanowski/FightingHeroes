@@ -4,17 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
+using System.IO;
 
 namespace FightingHeroes.Sound
 {
     static class SoundEffect
     {
-        public static void GetSound(string location)
+        public static void GetSound(UnmanagedMemoryStream resource)
         {
-            var sound = new SoundPlayer
-            {
-                SoundLocation = location
-            };
+            Stream str = resource;
+            PlaySound(str);
+        }
+
+        public static void PlaySound(Stream stream)
+        {
+            SoundPlayer sound = new SoundPlayer(stream);
             sound.Play();
         }
     }
