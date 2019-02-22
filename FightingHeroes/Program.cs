@@ -7,6 +7,9 @@ using FightingHeroes.Character.Player;
 
 namespace FightingHeroes
 {
+    /*
+     * Added new method: SpecialAttack(). Working on implementation of SpecialAttack() method.
+     */
     class Program
     {
         static void Main(string[] args)

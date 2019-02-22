@@ -29,6 +29,18 @@ namespace FightingHeroes
         public abstract int Attack();
         public abstract int Block();
         public abstract int Defense();
-        public abstract int RestoreHealth(int playerActualHealth, int healthPotionsAmount);  
+        public abstract int RestoreHealth(int playerActualHealth, int healthPotionsAmount);
+
+        public int SpecialAttack(int attack1, int attack2, int attack3, int specialAttackNumber)
+        {
+            if (specialAttackNumber > 0)
+            {
+                return (attack1 + attack2 + attack3) - 10;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

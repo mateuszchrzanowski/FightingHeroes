@@ -216,6 +216,47 @@ namespace FightingHeroes
             }
         }
 
+        public static string GetSpecialAttackResult(Hero heroA, Hero heroB)
+        {
+            int heroASpecialAttack = heroA.SpecialAttack();
+            int heroBBlock = heroB.Block();
+            int dealedDamage = heroAAttack - heroBBlock;
+
+            if (dealedDamage > 0)
+            {
+                heroB.Health = heroB.Health - dealedDamage;
+            }
+            else
+            {
+                dealedDamage = 0;
+            }
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+            Console.WriteLine($"\n{heroA.Name} attacks {heroB.Name} ({heroAAttack})");
+            Console.WriteLine($"{heroB.Name} blocks ({heroBBlock})");
+            Console.WriteLine($"{heroA.Name} deals damage ({dealedDamage})");
+
+            if (heroB.Health <= 0)
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+
+                Console.WriteLine();
+                Console.WriteLine($"{heroA.Name} <H: {heroA.Health}>");
+                Console.WriteLine($"{heroB.Name} <H: {heroB.Health}>");
+
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+                Console.WriteLine();
+                Console.WriteLine($"{heroB.Name} died! {heroA.Name} is victorius!");
+                return "Game Over!";
+            }
+            else
+            {
+                return "Fight Again!";
+            }
+        }
+
         public static string GetHealthPotionResult(Hero heroA, Hero heroB)
         {
             int heroABlock = heroA.Block();
