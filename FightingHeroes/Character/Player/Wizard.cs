@@ -120,9 +120,16 @@ namespace FightingHeroes.Character.Player
             return Health;
         }
 
-        //public override int SpecialAttack()
-        //{
-        //    return (FireballAttackMax + LightningAttackMax + WildFireAttackMax) - 10;
-        //}
+        public override int SpecialAttack(int specialAttackNumber)
+        {
+            if (specialAttackNumber > 0)
+            {
+                return (FireballAttackMax + LightningAttackMax + WildFireAttackMax) - 10;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 }

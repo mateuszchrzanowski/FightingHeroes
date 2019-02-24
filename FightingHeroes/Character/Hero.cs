@@ -15,6 +15,7 @@ namespace FightingHeroes
         public int Armor { get; set; }
         public int AttackMax { get; set; }
         public int HealthPotionsAmount { get; set; }
+        public int SpecialAttackNumber { get; set; }
 
         public Random rnd = new Random();
 
@@ -31,16 +32,6 @@ namespace FightingHeroes
         public abstract int Defense();
         public abstract int RestoreHealth(int playerActualHealth, int healthPotionsAmount);
 
-        public int SpecialAttack(int attack1, int attack2, int attack3, int specialAttackNumber)
-        {
-            if (specialAttackNumber > 0)
-            {
-                return (attack1 + attack2 + attack3) - 10;
-            }
-            else
-            {
-                return 0;
-            }
-        }
+        public abstract int SpecialAttack(int specialAttackNumber);
     }
 }

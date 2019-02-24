@@ -8,7 +8,11 @@ using FightingHeroes.Character.Player;
 namespace FightingHeroes
 {
     /*
-     * Added new method: SpecialAttack(). Working on implementation of SpecialAttack() method.
+     * TO DO:
+     * sounds for special attack (all characters)
+     * 
+     * Working on implementation of SpecialAttack() method. Added GetSpecialAttackResult() method.
+     * Added case statement in GetAction() method
      */
     class Program
     {
