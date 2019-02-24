@@ -123,22 +123,14 @@ namespace FightingHeroes.Character.Player
 
         public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
         {
-            //if (healthPotionsAmount > 0)
-            //{
-                if (playerActualHealth < 25)
-                {
-                    Health = Health + 5;
-                }
-                else if (playerActualHealth >= 25 && playerActualHealth < 30)
-                {
-                    Health = 30;
-                }
-            //}
-            //else
-            //{
-            //    return 0;
-            //}
-
+            if (playerActualHealth < 25)
+            {
+                Health = Health + 5;
+            }
+            else if (playerActualHealth >= 25 && playerActualHealth < 30)
+            {
+                Health = 30;
+            }
             return Health;
         }
     }

@@ -31,7 +31,5 @@ namespace FightingHeroes
         public abstract int Block();
         public abstract int Defense();
         public abstract int RestoreHealth(int playerActualHealth, int healthPotionsAmount);
-        
-        //public abstract int SpecialAttack(int specialAttackNumber);
     }
 }

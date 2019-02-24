@@ -7,16 +7,6 @@ using FightingHeroes.Character.Player;
 
 namespace FightingHeroes
 {
-    /*
-     * TO DO:
-     * sounds for special attack (all characters)
-     * 
-     * DONE:
-     * Edited RestoreHealth() method.
-     * Added Special Attack to attack type selection.
-     * Deleted GetSpecialAttackResult() method.
-     * Deleted case statement in GetAction() method
-     */
     class Program
     {
         static void Main(string[] args)
