@@ -145,6 +145,9 @@
   <data name="hunter_defense" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\hunter-defense.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="hunter_special" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\hunter-special.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\intro.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -178,6 +181,9 @@
   <data name="warrior_defense" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\warrior-defense.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="warrior_special" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\warrior-special.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="wild_fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\wild-fire.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -186,6 +192,9 @@
   </data>
   <data name="wizard_defense" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\wizard-defense.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="wizard_special" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\wizard-special.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="zombie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\zombie.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

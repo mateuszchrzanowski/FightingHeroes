@@ -11,8 +11,11 @@ namespace FightingHeroes
      * TO DO:
      * sounds for special attack (all characters)
      * 
-     * Working on implementation of SpecialAttack() method. Added GetSpecialAttackResult() method.
-     * Added case statement in GetAction() method
+     * DONE:
+     * Edited RestoreHealth() method.
+     * Added Special Attack to attack type selection.
+     * Deleted GetSpecialAttackResult() method.
+     * Deleted case statement in GetAction() method
      */
     class Program
     {
@@ -26,11 +29,12 @@ namespace FightingHeroes
                         Name = Intro.GetName(),
                         CharacterClass = "Wizard",
                         Health = 30,
-                        Armor = 7,
+                        Armor = 6,
                         FireballAttackMax = 13,
                         LightningAttackMax = 15,
                         WildFireAttackMax = 17,
                         HealthPotionsAmount = 4,
+                        SpecialAttackNumber = 2
                     };
                     wizard.GetStats();
                     Journey.StartJourney(wizard);
@@ -46,6 +50,7 @@ namespace FightingHeroes
                         AxeAttackMax = 12,
                         MaceAttackMax = 15,
                         HealthPotionsAmount = 3,
+                        SpecialAttackNumber = 3
                     };
                     warrior.GetStats();
                     Journey.StartJourney(warrior);
@@ -61,6 +66,7 @@ namespace FightingHeroes
                         BowAttackMax = 13,
                         CrossbowAttackMax = 15,
                         HealthPotionsAmount = 4,
+                        SpecialAttackNumber = 4
                     };
                     hunter.GetStats();
                     Journey.StartJourney(hunter);

@@ -23,7 +23,8 @@ namespace FightingHeroes.Character.Player
                 Console.WriteLine("\nSelect your attack type: \n" +
                 $"[1] Sword (dmg: 5 - {SwordAttackMax}) \n" +
                 $"[2] Axe (dmg: 3 - {AxeAttackMax}) \n" +
-                $"[3] Mace (dmg: 1 - {MaceAttackMax})");
+                $"[3] Mace (dmg: 1 - {MaceAttackMax}) \n" +
+                $"[4] Special Attack (dmg: 27) (x{SpecialAttackNumber})");
 
                 ConsoleKeyInfo attack = Console.ReadKey();
 
@@ -40,6 +41,11 @@ namespace FightingHeroes.Character.Player
                     case '3':
                         Console.WriteLine();
                         attackType = MaceAttack();
+                        break;
+                    case '4':
+                        Console.WriteLine();
+                        attackType = SpecialAttack(SpecialAttackNumber);
+                        SpecialAttackNumber--;
                         break;
                     default:
                         attackType = 0;
@@ -72,6 +78,22 @@ namespace FightingHeroes.Character.Player
             return rnd.Next(1, MaceAttackMax);
         }
 
+        public int SpecialAttack(int specialAttackNumber)
+        {
+            if (specialAttackNumber > 0)
+            {
+                SoundEffect.GetSound(Resource.warrior_special);
+                return (SwordAttackMax + AxeAttackMax + MaceAttackMax) - 10;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("\nYou don't have enough power to use your special attack. Please select other attack.");
+                Console.ResetColor();
+                return 0;
+            }
+        }
+
         public override int Block()
         {
             return rnd.Next(3, Armor);
@@ -98,8 +120,8 @@ namespace FightingHeroes.Character.Player
 
         public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
         {
-            if (healthPotionsAmount > 0)
-            {
+            //if (healthPotionsAmount > 0)
+            //{
                 if (playerActualHealth < 30)
                 {
                     Health = Health + 5;
@@ -108,25 +130,13 @@ namespace FightingHeroes.Character.Player
                 {
                     Health = 35;
                 }
-            }
-            else
-            {
-                return 0;
-            }
+            //}
+            //else
+            //{
+            //    return 0;
+            //}
 
             return Health;
-        }
-
-        public override int SpecialAttack(int specialAttackNumber)
-        {
-            if (specialAttackNumber > 0)
-            {
-                return (SwordAttackMax + AxeAttackMax + MaceAttackMax) - 10;
-            }
-            else
-            {
-                return 0;
-            }
         }
     }
 }

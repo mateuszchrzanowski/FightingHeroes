@@ -145,5 +145,14 @@
   <ItemGroup>
     <None Include="Resources\zombie.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hunter-special.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warrior-special.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wizard-special.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

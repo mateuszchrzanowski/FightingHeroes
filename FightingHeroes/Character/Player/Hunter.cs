@@ -23,7 +23,8 @@ namespace FightingHeroes.Character.Player
                 Console.WriteLine("\nSelect your attack type: \n" +
                 $"[1] Dagger (dmg: 5 - {DaggerAttackMax}) \n" +
                 $"[2] Bow (dmg: 3 - {BowAttackMax}) \n" +
-                $"[3] Crossbow (dmg: 1 - {CrossbowAttackMax})");
+                $"[3] Crossbow (dmg: 1 - {CrossbowAttackMax}) \n" +
+                $"[4] Special Attack (dmg: 27) (x{SpecialAttackNumber})");
 
                 ConsoleKeyInfo attack = Console.ReadKey();
 
@@ -40,6 +41,11 @@ namespace FightingHeroes.Character.Player
                     case '3':
                         Console.WriteLine();
                         attackType = CrossbowAttack();
+                        break;
+                    case '4':
+                        Console.WriteLine();
+                        attackType = SpecialAttack(SpecialAttackNumber);
+                        SpecialAttackNumber--;
                         break;
                     default:
                         attackType = 0;
@@ -72,6 +78,22 @@ namespace FightingHeroes.Character.Player
             return rnd.Next(2, CrossbowAttackMax);
         }
 
+        public int SpecialAttack(int specialAttackNumber)
+        {
+            if (specialAttackNumber > 0)
+            {
+                SoundEffect.GetSound(Resource.hunter_special);
+                return (DaggerAttackMax + BowAttackMax + CrossbowAttackMax) - 10;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                Console.WriteLine("\nYou don't have enough power to use your special attack. Please select other attack.");
+                Console.ResetColor();
+                return 0;
+            }
+        }
+
         public override int Block()
         {
             return rnd.Next(1, Armor);
@@ -98,8 +120,8 @@ namespace FightingHeroes.Character.Player
 
         public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
         {
-            if (healthPotionsAmount > 0)
-            {
+            //if (healthPotionsAmount > 0)
+            //{
                 if (playerActualHealth < 25)
                 {
                     Health = Health + 5;
@@ -108,25 +130,13 @@ namespace FightingHeroes.Character.Player
                 {
                     Health = 30;
                 }
-            }
-            else
-            {
-                return 0;
-            }
+            //}
+            //else
+            //{
+            //    return 0;
+            //}
 
             return Health;
-        }
-
-        public override int SpecialAttack(int specialAttackNumber)
-        {
-            if (specialAttackNumber > 0)
-            {
-                return (DaggerAttackMax + BowAttackMax + CrossbowAttackMax) - 10;
-            }
-            else
-            {
-                return 0;
-            }
         }
     }
 }

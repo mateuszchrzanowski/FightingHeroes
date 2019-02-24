@@ -10,9 +10,8 @@
 
 namespace FightingHeroes {
     using System;
-    using System.IO;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -145,6 +144,15 @@ namespace FightingHeroes {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream hunter_special {
+            get {
+                return ResourceManager.GetStream("hunter_special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream intro {
             get {
                 return ResourceManager.GetStream("intro", resourceCulture);
@@ -244,6 +252,15 @@ namespace FightingHeroes {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream warrior_special {
+            get {
+                return ResourceManager.GetStream("warrior_special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream wild_fire {
             get {
                 return ResourceManager.GetStream("wild_fire", resourceCulture);
@@ -271,15 +288,19 @@ namespace FightingHeroes {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream wizard_special {
+            get {
+                return ResourceManager.GetStream("wizard_special", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream zombie {
             get {
                 return ResourceManager.GetStream("zombie", resourceCulture);
             }
-        }
-
-        public static implicit operator Stream(Resource v)
-        {
-            throw new NotImplementedException();
         }
     }
 }
