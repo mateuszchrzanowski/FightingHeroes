@@ -86,7 +86,7 @@ namespace FightingHeroes
             {
                 Console.WriteLine("Select your action: \n" +
                 "[1] Attack \n" +
-                "[2] Defensive position \n" +
+                $"[2] Defensive position (x{hero.DefenseAmount}) \n" +
                 $"[3] Health Potion (x{hero.HealthPotionsAmount})");
 
                 ConsoleKeyInfo action = Console.ReadKey();
@@ -98,9 +98,21 @@ namespace FightingHeroes
                         actionType = "attack";
                         break;
                     case '2':
-                        Console.WriteLine();
-                        actionType = "defense";
-                        break;
+                        if (hero.DefenseAmount > 0)
+                        {
+                            Console.WriteLine();
+                            actionType = "defense";
+                            break;
+                        }
+                        else
+                        {
+                            actionType = "error";
+                            Console.WriteLine();
+                            Console.ForegroundColor = ConsoleColor.Magenta;
+                            Console.WriteLine("\nYou don't have any Defense Possibilities! Please select other action.\n");
+                            Console.ResetColor();
+                            break;
+                        }
                     case '3':
                         if(hero.HealthPotionsAmount > 0)
                         {
@@ -179,6 +191,21 @@ namespace FightingHeroes
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroADefense;
 
+            heroA.DefenseRestoreHealth(heroA.Health);
+            heroA.DefenseAmount--;
+
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+
+            Console.WriteLine($"\n{heroA.Name} gets defensive position. \n" +
+                $"He is able to use his max armor ({heroA.Armor}). \n" +
+                "He restored 10 health points. \n");
+
+            Console.ForegroundColor = ConsoleColor.DarkRed;
+
+            Console.WriteLine($"{heroA.Name} <H: {heroA.Health}> \n");
+
+            Console.ResetColor();
+
             if (dealedDamage > 0)
             {
                 heroA.Health = heroA.Health - dealedDamage;
@@ -187,10 +214,6 @@ namespace FightingHeroes
             {
                 dealedDamage = 0;
             }
-
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-
-            Console.WriteLine($"\n{heroA.Name} gets defensive position. He is able to use his max armor ({heroA.Armor})\n");
 
             Console.WriteLine($"{heroB.Name} attacks {heroA.Name} ({heroBAttack})");
             Console.WriteLine($"{heroA.Name} blocks ({heroADefense})");
@@ -222,13 +245,13 @@ namespace FightingHeroes
             int heroBAttack = heroB.Attack();
             int dealedDamage = heroBAttack - heroABlock;
 
-            heroA.RestoreHealth(heroA.Health, heroA.HealthPotionsAmount);
+            heroA.RestoreHealth(heroA.Health);
             heroA.HealthPotionsAmount--;
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 
-            Console.WriteLine($"\n{heroA.Name} uses Health Potion. He restored 5 health points. \n");
-
+            Console.WriteLine($"\n{heroA.Name} uses Health Potion. \n" +
+                "He restored 15 health points. \n");
 
             Console.ForegroundColor = ConsoleColor.DarkRed;
 

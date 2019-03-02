@@ -14,6 +14,7 @@ namespace FightingHeroes
         public int Health { get; set; }
         public int Armor { get; set; }
         public int AttackMax { get; set; }
+        public int DefenseAmount { get; set; } = 3;
         public int HealthPotionsAmount { get; set; }
         public int SpecialAttackNumber { get; set; }
 
@@ -30,6 +31,7 @@ namespace FightingHeroes
         public abstract int Attack();
         public abstract int Block();
         public abstract int Defense();
-        public abstract int RestoreHealth(int playerActualHealth, int healthPotionsAmount);
+        public abstract int DefenseRestoreHealth(int playerActualHealth);
+        public abstract int RestoreHealth(int playerActualHealth);
     }
 }

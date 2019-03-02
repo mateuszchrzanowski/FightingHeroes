@@ -105,6 +105,20 @@ namespace FightingHeroes.Character.Player
             return Armor;
         }
 
+        public override int DefenseRestoreHealth(int playerActualHealth)
+        {
+            if (playerActualHealth < 25)
+            {
+                Health = Health + 10;
+            }
+            else if (playerActualHealth >= 25 && playerActualHealth < 35)
+            {
+                Health = 35;
+            }
+
+            return Health;
+        }
+
         public override void GetStats()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -113,18 +127,20 @@ namespace FightingHeroes.Character.Player
             Console.WriteLine($"Max Sword Damage: {SwordAttackMax} \n" +
                         $"Max Axe Damage: {AxeAttackMax} \n" +
                         $"Max Mace Damage: {MaceAttackMax} \n" +
+                        $"Defense Possibilities: {DefenseAmount} \n" +
+                        $"Health Potions Amount: {HealthPotionsAmount} \n" +
                         $"<H: {Health} | A: {Armor} | " +
                         $"MSD: {SwordAttackMax} | MAD: {AxeAttackMax} | MMD: {MaceAttackMax}> \n");
             Console.ResetColor();
         }
 
-        public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
+        public override int RestoreHealth(int playerActualHealth)
         {
-            if (playerActualHealth < 30)
+            if (playerActualHealth < 20)
             {
-                Health = Health + 5;
+                Health = Health + 15;
             }
-            else if (playerActualHealth >= 30 && playerActualHealth < 35)
+            else if (playerActualHealth >= 20 && playerActualHealth < 35)
             {
                 Health = 35;
             }

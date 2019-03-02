@@ -24,6 +24,11 @@ namespace FightingHeroes.Character.Opponent
             throw new NotImplementedException();
         }
 
+        public override int DefenseRestoreHealth(int playerActualHealth)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void GetStats()
         {
             Console.ForegroundColor = ConsoleColor.Green;
@@ -36,7 +41,7 @@ namespace FightingHeroes.Character.Opponent
             SoundEffect.GetSound(Resource.troll);
         }
 
-        public override int RestoreHealth(int playerActualHealth, int healthPotionsAmount)
+        public override int RestoreHealth(int playerActualHealth)
         {
             throw new NotImplementedException();
         }
